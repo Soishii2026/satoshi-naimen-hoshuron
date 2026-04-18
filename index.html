@@ -67,9 +67,9 @@
     <div style="background:var(--bg-2);border:1px solid var(--border-gold);padding:28px 24px;position:relative;overflow:hidden;">
       <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent)"></div>
       <p style="font-family:var(--font-sans);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">最新コラム</p>
-      <p style="font-family:var(--font-serif);font-size:1.1rem;font-weight:700;color:var(--text-0);line-height:1.5;margin-bottom:12px;">南鳥島に、何を積み上げるのか</p>
-      <p style="font-family:var(--font-serif);font-size:0.85rem;color:var(--text-1);line-height:1.8;margin-bottom:20px;">「住民がいないから反対が出にくい」という論理は、民主的な合意形成の基礎を意図的に迂回しているに過ぎない。</p>
-      <a href="article.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--gold);display:flex;align-items:center;gap:6px;">全文を読む →</a>
+      <p style="font-family:var(--font-serif);font-size:1.1rem;font-weight:700;color:var(--text-0);line-height:1.5;margin-bottom:12px;">兵器庫ではなく、政治の中でしか行えないこと</p>
+      <p style="font-family:var(--font-serif);font-size:0.85rem;color:var(--text-1);line-height:1.8;margin-bottom:20px;">「守られる国家」から「自ら守る国家」へ。専守防衛の再定義とは軍事ドクトリンの修正ではなく、日本が安全保障の最終責任を政治として所有し直す作業である。</p>
+      <a href="buki.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--gold);display:flex;align-items:center;gap:6px;">全文を読む →</a>
     </div>
   </div>
 </section>
@@ -97,15 +97,42 @@
   <section aria-label="記事一覧">
     <div class="section-header">
       <h2 class="section-title">Articles</h2>
-      <span class="section-count" id="article-count">2 本</span>
+      <span class="section-count" id="article-count">3 本</span>
     </div>
 
     <div class="articles-list" id="articles-list">
 
       <!-- Featured -->
       <article class="article-card featured fade-in"
+               data-title="兵器庫ではなく、政治の中でしか行えないこと"
+               data-tags="安全保障 専守防衛 日米同盟 抑止 自衛隊"
+               onclick="location.href='buki.html'">
+        <div class="card-thumb" id="thumb-buki">
+          <img src="images/buki-hero.jpg" alt="専守防衛と政治の所有権" loading="lazy"
+               onerror="document.getElementById('thumb-buki').style.display='none'">
+        </div>
+        <div class="card-meta">
+          <time class="card-date" datetime="2026-04-19">2026.04.19</time>
+          <div class="card-tags">
+            <span class="tag featured-tag">最新</span>
+            <span class="tag">安全保障</span>
+            <span class="tag">専守防衛</span>
+            <span class="tag">日米同盟</span>
+          </div>
+        </div>
+        <h3 class="card-title">兵器庫ではなく、政治の中でしか行えないこと</h3>
+        <p class="card-excerpt">「守られる国家」から「自ら守る国家」へ。専守防衛の再定義とは軍事ドクトリンの修正ではなく、日本が安全保障の最終責任を政治として所有し直す作業である。弾道ミサイルの着弾まで4〜6分、意思決定に許される時間はさらにその内側にある。問われているのは兵器の性能ではなく、決断の所在だ。</p>
+        <div class="card-footer">
+          <span class="read-time">約6分</span>
+          <span class="read-more">全文を読む <span aria-hidden="true">→</span></span>
+        </div>
+      </article>
+
+      <!-- Article 2 -->
+      <article class="article-card fade-in"
                data-title="南鳥島に、何を積み上げるのか"
                data-tags="国土安保 安全保障 エネルギー 核廃棄物"
+               style="animation-delay:0.1s"
                onclick="location.href='article.html'">
         <div class="card-thumb" id="thumb-minami">
           <img src="images/minami-torishima-hero.jpg" alt="南鳥島" loading="lazy"
@@ -114,7 +141,6 @@
         <div class="card-meta">
           <time class="card-date" datetime="2026-04-18">2026.04.18</time>
           <div class="card-tags">
-            <span class="tag featured-tag">最新</span>
             <span class="tag">国土安保</span>
             <span class="tag">安全保障</span>
             <span class="tag">エネルギー</span>
@@ -128,11 +154,11 @@
         </div>
       </article>
 
-      <!-- Article 2 -->
+      <!-- Article 3 -->
       <article class="article-card fade-in"
                data-title="量はある、だが届かない ホルムズ危機で露呈した可用性の崩壊"
                data-tags="ホルムズ危機 エネルギー安保 経済安保 物流 可用性"
-               style="animation-delay:0.1s"
+               style="animation-delay:0.2s"
                onclick="location.href='hormuz.html'">
         <div class="card-thumb" id="thumb-hormuz">
           <img src="images/hormuz-hero.jpg" alt="ホルムズ危機" loading="lazy"
@@ -185,9 +211,13 @@
     <div class="sidebar-block" id="categories">
       <p class="sidebar-block-title">カテゴリ</p>
       <ul class="cat-list" role="list">
+        <li class="cat-item" onclick="filterArticles('専守防衛')">
+          <span>専守防衛・抑止論</span>
+          <span class="cat-count">1</span>
+        </li>
         <li class="cat-item" onclick="filterArticles('安全保障')">
           <span>国土・安全保障</span>
-          <span class="cat-count">1</span>
+          <span class="cat-count">2</span>
         </li>
         <li class="cat-item" onclick="filterArticles('エネルギー')">
           <span>エネルギー安保</span>
@@ -254,6 +284,7 @@
       <div>
         <p style="font-family:var(--font-sans);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">最近の記事</p>
         <ul style="display:flex;flex-direction:column;gap:8px;">
+          <li><a href="buki.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">兵器庫ではなく、政治の中でしか行えないこと</a></li>
           <li><a href="article.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">南鳥島に、何を積み上げるのか</a></li>
           <li><a href="hormuz.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'"">「量はある、だが届かない」</a></li>
         </ul>
