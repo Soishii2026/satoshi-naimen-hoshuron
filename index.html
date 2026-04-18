@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="石井聡の政治コラム「内側からの保守論」。保守の内側から、統治の節度を問う。産経新聞「政界十六夜」連載中。">
+  <meta name="author" content="石井聡">
+  <meta property="og:title" content="内側からの保守論 — 石井聡">
+  <meta property="og:description" content="保守の内側から、統治の節度を問う。">
+  <meta property="og:type" content="website">
+  <title>内側からの保守論 — 石井聡</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" type="application/rss+xml" title="内側からの保守論 RSS" href="rss.xml">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230b0e17'/><text x='50%25' y='56%25' font-size='20' text-anchor='middle' dominant-baseline='middle' fill='%23c9a85c' font-family='serif'>保</text></svg>">
+</head>
+<body>
+
+<div id="progress-bar"></div>
+<a href="#main" class="skip-link">本文へ</a>
+
+<!-- ─── Header ─── -->
+<header class="site-header">
+  <div class="note-ribbon">
+    <span>産経新聞「政界十六夜」連載中</span>
+    <a href="https://note.com" target="_blank" rel="noopener">
+      <span class="note-icon">n</span>
+      note でフォロー
+    </a>
+  </div>
+  <div class="masthead">
+    <div class="masthead-brand">
+      <a href="index.html" class="masthead-title">内側からの<span>保守論</span></a>
+      <p class="masthead-tagline">保守の内側から、統治の節度を問う</p>
+    </div>
+    <nav class="masthead-nav" aria-label="メインナビゲーション">
+      <a href="index.html">記事一覧</a>
+      <a href="#categories">カテゴリ</a>
+      <a href="#about">筆者について</a>
+      <a href="rss.xml">RSS</a>
+      <a href="https://note.com" target="_blank" rel="noopener" style="color:var(--gold)">note →</a>
+    </nav>
+    <button class="hamburger" aria-label="メニュー" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="モバイルナビゲーション">
+    <a href="index.html">記事一覧</a>
+    <a href="#categories">カテゴリ</a>
+    <a href="#about">筆者について</a>
+    <a href="rss.xml">RSS</a>
+    <a href="https://note.com" target="_blank" rel="noopener" style="color:var(--gold)">note でフォロー →</a>
+  </nav>
+</header>
+
+<!-- ─── Hero ─── -->
+<section class="hero" aria-label="サイト紹介">
+  <div class="hero-content fade-in">
+    <p class="hero-eyebrow">Column / 政治コラム</p>
+    <h1 class="hero-title">保守の内側から、<br>統治の節度を問う</h1>
+    <div class="hero-divider"></div>
+    <p class="hero-desc">
+      「一発も撃たれずに負ける」状況を最も警戒する。<br>
+      自民党や保守陣営を内側から問うコラムニスト、石井聡が書く。
+    </p>
+  </div>
+  <div class="hero-deco fade-in" style="animation-delay:0.15s">
+    <div style="background:var(--bg-2);border:1px solid var(--border-gold);padding:28px 24px;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent)"></div>
+      <p style="font-family:var(--font-sans);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">最新コラム</p>
+      <p style="font-family:var(--font-serif);font-size:1.1rem;font-weight:700;color:var(--text-0);line-height:1.5;margin-bottom:12px;">南鳥島に、何を積み上げるのか</p>
+      <p style="font-family:var(--font-serif);font-size:0.85rem;color:var(--text-1);line-height:1.8;margin-bottom:20px;">「住民がいないから反対が出にくい」という論理は、民主的な合意形成の基礎を意図的に迂回しているに過ぎない。</p>
+      <a href="article.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--gold);display:flex;align-items:center;gap:6px;">全文を読む →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Search ─── -->
+<div class="search-wrapper" role="search">
+  <div class="search-inner">
+    <input
+      type="search"
+      class="search-input"
+      id="search-input"
+      placeholder="記事を検索（タイトル・タグ）"
+      aria-label="記事を検索"
+      oninput="filterArticles(this.value)"
+    >
+    <span class="search-icon" aria-hidden="true">🔍</span>
+    <p class="search-results-count" id="search-count" aria-live="polite"></p>
+  </div>
+</div>
+
+<!-- ─── Main Content ─── -->
+<main id="main" class="page-content">
+
+  <!-- ─── Articles ─── -->
+  <section aria-label="記事一覧">
+    <div class="section-header">
+      <h2 class="section-title">Articles</h2>
+      <span class="section-count" id="article-count">2 本</span>
+    </div>
+
+    <div class="articles-list" id="articles-list">
+
+      <!-- Featured -->
+      <article class="article-card featured fade-in"
+               data-title="南鳥島に、何を積み上げるのか"
+               data-tags="国土安保 安全保障 エネルギー 核廃棄物"
+               onclick="location.href='article.html'">
+        <div class="card-meta">
+          <time class="card-date" datetime="2026-04-18">2026.04.18</time>
+          <div class="card-tags">
+            <span class="tag featured-tag">最新</span>
+            <span class="tag">国土安保</span>
+            <span class="tag">安全保障</span>
+            <span class="tag">エネルギー</span>
+          </div>
+        </div>
+        <h3 class="card-title">南鳥島に、何を積み上げるのか</h3>
+        <p class="card-excerpt">東京から約1,900km。太平洋の最果ての孤島・南鳥島に、今、計算された「積み上げ」が静かに進んでいる。レアアース開発、自衛隊拠点化、そして核廃棄物処分場選定——3つの国家意思が、同じ小さな島に重なりつつある。「住民がいないから反対が出にくい」という論理は、民主的な合意形成の基礎を意図的に迂回しているに過ぎない。</p>
+        <div class="card-footer">
+          <span class="read-time">約5分</span>
+          <span class="read-more">全文を読む <span aria-hidden="true">→</span></span>
+        </div>
+      </article>
+
+      <!-- Article 2 -->
+      <article class="article-card fade-in"
+               data-title="量はある、だが届かない ホルムズ危機で露呈した可用性の崩壊"
+               data-tags="ホルムズ危機 エネルギー安保 経済安保 物流 可用性"
+               style="animation-delay:0.1s"
+               onclick="location.href='hormuz.html'">
+        <div class="card-meta">
+          <time class="card-date" datetime="2026-04-18">2026.04.18</time>
+          <div class="card-tags">
+            <span class="tag">ホルムズ危機</span>
+            <span class="tag">エネルギー安保</span>
+            <span class="tag">経済安保</span>
+          </div>
+        </div>
+        <h3 class="card-title">「量はある、だが届かない」——ホルムズ危機で露呈した可用性の崩壊</h3>
+        <p class="card-excerpt">「日本全体として必要となる量は確保できている」——政府はそう説明する。だがホルムズ危機が暴いたのは、総量の不足よりも深い機能不全だった。ガソリン店頭価格は3月2日の158円から16日には190円超へ、わずか2週間で32円の上昇。「倉庫にあるか」ではなく「誰に、何を、どの順番で、どう届けるか」——危機の本質はそこにある。</p>
+        <div class="card-footer">
+          <span class="read-time">約6分</span>
+          <span class="read-more">全文を読む <span aria-hidden="true">→</span></span>
+        </div>
+      </article>
+
+    </div><!-- /articles-list -->
+
+    <div class="no-results hidden" id="no-results">
+      <p>「<span id="no-results-query"></span>」に一致する記事が見つかりませんでした。</p>
+    </div>
+
+
+  </section>
+
+  <!-- ─── Sidebar ─── -->
+  <aside class="sidebar" id="about" aria-label="サイドバー">
+
+    <!-- Author -->
+    <div class="sidebar-block">
+      <p class="sidebar-block-title">筆者について</p>
+      <p class="author-name">石井　聡</p>
+      <p class="author-role">CEO / 産経新聞「政界十六夜」コラムニスト</p>
+      <p class="author-bio">
+        保守の内側から自民党・保守陣営を問うコラムニスト。
+        主要テーマは日本政治の内実、国家象徴の扱い、安保・外交・エネルギー安全保障。
+        「一発も撃たれずに負ける」状況を最も警戒する。
+      </p>
+      <a href="https://note.com" target="_blank" rel="noopener" class="note-cta">
+        note でフォローする →
+      </a>
+    </div>
+
+    <!-- Categories -->
+    <div class="sidebar-block" id="categories">
+      <p class="sidebar-block-title">カテゴリ</p>
+      <ul class="cat-list" role="list">
+        <li class="cat-item" onclick="filterArticles('安全保障')">
+          <span>国土・安全保障</span>
+          <span class="cat-count">1</span>
+        </li>
+        <li class="cat-item" onclick="filterArticles('エネルギー')">
+          <span>エネルギー安保</span>
+          <span class="cat-count">2</span>
+        </li>
+        <li class="cat-item" onclick="filterArticles('ホルムズ')">
+          <span>ホルムズ危機</span>
+          <span class="cat-count">1</span>
+        </li>
+        <li class="cat-item" onclick="filterArticles('経済安保')">
+          <span>経済安全保障</span>
+          <span class="cat-count">1</span>
+        </li>
+      </ul>
+      <button onclick="filterArticles('')"
+              style="margin-top:12px;font-family:var(--font-sans);font-size:0.72rem;color:var(--text-2);background:none;border:none;cursor:pointer;padding:0;transition:color 0.2s"
+              onmouseover="this.style.color='var(--gold)'"
+              onmouseout="this.style.color='var(--text-2)'">
+        すべて表示
+      </button>
+    </div>
+
+    <!-- RSS -->
+    <div class="sidebar-block">
+      <p class="sidebar-block-title">購読</p>
+      <p style="font-family:var(--font-sans);font-size:0.8rem;color:var(--text-1);margin-bottom:16px;line-height:1.7;">
+        RSSリーダーで最新コラムを受け取る。<br>あるいはnoteでフォローしてください。
+      </p>
+      <a href="rss.xml" class="rss-link" style="margin-bottom:12px;display:flex;">
+        <span class="rss-icon">RSS</span>
+        RSSフィードを購読
+      </a>
+      <a href="https://note.com" target="_blank" rel="noopener" class="rss-link">
+        <span class="note-icon" style="background:#41c9b4;font-family:Georgia,serif;font-style:italic;font-weight:700;font-size:11px;color:#fff;width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;border-radius:3px;">n</span>
+        note で読む
+      </a>
+    </div>
+
+    <!-- Quote -->
+    <div class="sidebar-block" style="background:transparent;border:1px solid var(--border-gold);">
+      <p style="font-family:var(--font-serif);font-size:0.88rem;color:var(--text-1);line-height:1.9;font-style:italic;">
+        「国家と政党の距離が曖昧になると、まず損なわれるのは法ではなく統治の節度である」
+      </p>
+      <p style="font-family:var(--font-sans);font-size:0.68rem;color:var(--gold-dim);margin-top:12px;letter-spacing:0.1em;">— 石井聡</p>
+    </div>
+
+  </aside>
+
+</main>
+
+<!-- ─── Footer ─── -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand-name">内側からの保守論</p>
+        <p class="footer-brand-tagline">保守の内側から、統治の節度を問う</p>
+        <div class="footer-links">
+          <a href="index.html">記事一覧</a>
+          <a href="rss.xml">RSS</a>
+          <a href="https://note.com" target="_blank" rel="noopener">note</a>
+        </div>
+      </div>
+      <div>
+        <p style="font-family:var(--font-sans);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">最近の記事</p>
+        <ul style="display:flex;flex-direction:column;gap:8px;">
+          <li><a href="article.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">南鳥島に、何を積み上げるのか</a></li>
+          <li><a href="hormuz.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'"">「量はある、だが届かない」</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 石井聡 / 内側からの保守論. All rights reserved.</p>
+      <p class="footer-disclaimer">本サイトは個人のコラム発信を目的としています。産経新聞掲載のコラムとは内容が異なる場合があります。</p>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scroll-top" aria-label="ページ先頭へ" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+/* ─── Mobile nav ─── */
+function toggleMobileNav() {
+  document.getElementById('mobile-nav').classList.toggle('open');
+}
+
+/* ─── Search / Filter ─── */
+function filterArticles(query) {
+  const q = query.trim().toLowerCase();
+  const cards = document.querySelectorAll('#articles-list .article-card');
+  const noResults = document.getElementById('no-results');
+  const countEl = document.getElementById('article-count');
+  const searchInput = document.getElementById('search-input');
+
+  if (query !== searchInput.value) searchInput.value = query;
+
+  let visible = 0;
+  cards.forEach(card => {
+    const title = (card.dataset.title || '').toLowerCase();
+    const tags  = (card.dataset.tags  || '').toLowerCase();
+    const match = !q || title.includes(q) || tags.includes(q);
+    card.classList.toggle('hidden', !match);
+    if (match) visible++;
+  });
+
+  const countSpan = document.getElementById('search-count');
+  if (q) {
+    countSpan.textContent = `「${query}」— ${visible} 件`;
+  } else {
+    countSpan.textContent = '';
+  }
+  countEl.textContent = `${visible} 本`;
+
+  if (visible === 0 && q) {
+    document.getElementById('no-results-query').textContent = query;
+    noResults.classList.remove('hidden');
+  } else {
+    noResults.classList.add('hidden');
+  }
+}
+
+/* ─── Scroll to top ─── */
+const scrollBtn = document.getElementById('scroll-top');
+window.addEventListener('scroll', () => {
+  scrollBtn.classList.toggle('visible', window.scrollY > 400);
+});
+
+/* ─── Fade-in on scroll ─── */
+const fadeEls = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+fadeEls.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
