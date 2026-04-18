@@ -24,7 +24,7 @@
 <header class="site-header">
   <div class="note-ribbon">
     <span>産経新聞「政界十六夜」連載中</span>
-    <a href="https://note.com" target="_blank" rel="noopener">
+    <a href="https://note.com/s_ishii" target="_blank" rel="noopener">
       <span class="note-icon">n</span>
       note でフォロー
     </a>
@@ -39,7 +39,7 @@
       <a href="index.html#categories">カテゴリ</a>
       <a href="index.html#about">筆者について</a>
       <a href="rss.xml">RSS</a>
-      <a href="https://note.com" target="_blank" rel="noopener" style="color:var(--gold)">note →</a>
+      <a href="https://note.com/s_ishii" target="_blank" rel="noopener" style="color:var(--gold)">note →</a>
     </nav>
     <button class="hamburger" aria-label="メニュー" onclick="toggleMobileNav()">
       <span></span><span></span><span></span>
@@ -50,7 +50,7 @@
     <a href="index.html#categories">カテゴリ</a>
     <a href="index.html#about">筆者について</a>
     <a href="rss.xml">RSS</a>
-    <a href="https://note.com" target="_blank" rel="noopener" style="color:var(--gold)">note でフォロー →</a>
+    <a href="https://note.com/s_ishii" target="_blank" rel="noopener" style="color:var(--gold)">note でフォロー →</a>
   </nav>
 </header>
 
@@ -85,6 +85,12 @@
       </blockquote>
     </header>
 
+    <figure class="article-hero" id="hero-hormuz">
+      <img src="images/hormuz-hero.jpg" alt="ホルムズ海峡——石油タンカーが行き交う世界最大の石油輸送ルート" loading="eager"
+           onerror="document.getElementById('hero-hormuz').style.display='none'">
+      <figcaption>ホルムズ海峡 / 出所：公開資料</figcaption>
+    </figure>
+
     <article class="article-body">
 
       <p class="first-para">政府はなお「日本全体として必要となる量は確保できている」と説明する。確かに、国家全体の帳簿で見れば、石油も関連物資もゼロになったわけではない。だがホルムズ危機が暴いたのは、総量の不足よりも深い機能不全だった。必要な場所に、必要な日に、使える形で届かない。危機の本質はそこにある。</p>
@@ -97,11 +103,69 @@
 
       <div class="article-divider"><span class="article-divider-mark">◆</span></div>
 
+      <figure class="infographic" aria-label="図解：総量確保でも現場は詰まる">
+        <p class="infographic-eyebrow">図解</p>
+        <p class="infographic-title">
+          総量確保でも現場は詰まる<br>
+          <em>——ホルムズ危機で露呈した「可用性」の断絶（2026年4月16日時点）</em>
+        </p>
+
+        <div class="infographic-flow">
+          <div class="flow-node flow-node--ok">
+            <span class="flow-node-eyebrow">国家備蓄</span>
+            <span class="flow-node-label">倉庫の総量</span>
+            <span class="flow-badge flow-badge--ok">帳簿上は確保</span>
+          </div>
+
+          <div class="flow-connector">
+            <div class="flow-connector-arrow"></div>
+            <span class="flow-connector-x">✕</span>
+            <span class="flow-connector-label">配分回路の崩壊<br>入札不調・随意契約・供給拒否</span>
+          </div>
+
+          <div class="flow-node flow-node--fail">
+            <span class="flow-node-eyebrow">現場・生活</span>
+            <span class="flow-node-label">医療・交通・廃棄物処理</span>
+            <span class="flow-badge flow-badge--fail">必要な場所に届かない</span>
+          </div>
+        </div>
+
+        <div class="infographic-stats">
+          <div class="stat-card">
+            <div class="stat-number">+32<span class="stat-unit">円</span></div>
+            <div class="stat-desc">ガソリン2週間の上昇幅</div>
+            <div class="stat-sub">158円 → 190円超（3月2〜16日）</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">400<span class="stat-unit">社</span></div>
+            <div class="stat-desc">交通事業者が供給不全を報告</div>
+            <div class="stat-sub">国土交通省への申告件数</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">2,956<span class="stat-unit">件</span></div>
+            <div class="stat-desc">医療機関からの供給相談</div>
+            <div class="stat-sub">専門チーム97人体制で対応</div>
+          </div>
+          <div class="stat-card stat-card--accent">
+            <div class="stat-number">5,000<span class="stat-unit">万枚</span></div>
+            <div class="stat-desc">手袋備蓄放出 vs 月需要9,000万枚</div>
+            <div class="stat-sub">月需要の55%——根治療法ではない</div>
+          </div>
+        </div>
+
+        <figcaption>出所：政府資料・国土交通省・厚生労働省（2026年4月16日時点）をもとに作成</figcaption>
+      </figure>
+
       <p>交通分野では、可用性の崩壊がもっと露骨だった。<strong>国土交通省には約400事業者から「これまで通りの供給がなされていない」との声が寄せられた。</strong>入札が不調に終わり、随意契約でようやく1か月分だけ確保する。インタンク給油の見通しが立たず、スタンド給油でしのぐ。こうした事態は、量が足りないというより、通常の調達回路が壊れていることを示している。</p>
 
       <p class="key-point">省庁が一社ごとの燃料確保に走り回らなければならない時点で、それはもう平時の市場ではない。</p>
 
       <p>ごみ処理でも事情は同じだ。一般廃棄物の処理現場では入札不調や契約期間の短期化、随意契約への移行が相次ぎ、産業廃棄物分野では軽油供給を断られる事例も出た。焼却施設の助燃剤用重油が不足し、事業者間調整で当面分をかき集める。これは安保論議の周辺ではなく、生活そのものの危機である。ごみが回収されず、焼却が止まれば、住民生活は直ちに傷む。</p>
+
+      <figure class="article-figure">
+        <img src="images/hormuz-thumb.jpg" alt="ホルムズ危機による生活への影響——TOTO・ASKULなど各社の供給制限告知（2026年4月）" loading="lazy">
+        <figcaption>各社の告知をもとに作成。ホルムズ危機が日常調達に及ぼした具体的影響（2026年4月）</figcaption>
+      </figure>
 
       <div class="article-divider"><span class="article-divider-mark">◆</span></div>
 
@@ -123,7 +187,7 @@
         産経新聞「政界十六夜」とあわせてフォローしてください。
       </p>
       <div class="cta-buttons">
-        <a href="https://note.com" target="_blank" rel="noopener" class="btn-note">
+        <a href="https://note.com/s_ishii" target="_blank" rel="noopener" class="btn-note">
           <span style="font-family:Georgia,serif;font-style:italic;font-weight:700;">n</span>
           noteでフォローする
         </a>
@@ -176,7 +240,7 @@
       <p class="author-name">石井 聡</p>
       <p class="author-role">CEO / 産経新聞「政界十六夜」コラムニスト</p>
       <p class="author-bio">保守の内側から自民党・保守陣営を問うコラムニスト。安保・外交・エネルギー安全保障・中国複合戦略が主要テーマ。</p>
-      <a href="https://note.com" target="_blank" rel="noopener" class="note-cta">note でフォロー</a>
+      <a href="https://note.com/s_ishii" target="_blank" rel="noopener" class="note-cta">note でフォロー</a>
     </div>
 
     <div class="sidebar-block">
@@ -200,7 +264,7 @@
           <span style="width:20px;height:20px;background:#000;border-radius:3px;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;flex-shrink:0;">𝕏</span>
           X（Twitter）でシェア
         </a>
-        <a href="https://note.com" target="_blank" rel="noopener"
+        <a href="https://note.com/s_ishii" target="_blank" rel="noopener"
            style="display:flex;align-items:center;gap:8px;font-family:var(--font-sans);font-size:0.78rem;color:var(--text-1);transition:color 0.2s;"
            onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-1)'">
           <span style="width:20px;height:20px;background:#41c9b4;border-radius:3px;display:inline-flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-style:italic;font-weight:700;font-size:11px;color:#fff;flex-shrink:0;">n</span>
@@ -223,7 +287,7 @@
         <div class="footer-links">
           <a href="index.html">記事一覧</a>
           <a href="rss.xml">RSS</a>
-          <a href="https://note.com" target="_blank" rel="noopener">note</a>
+          <a href="https://note.com/s_ishii" target="_blank" rel="noopener">note</a>
         </div>
       </div>
       <div>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>内側からの保守論 — 石井聡</title>
+    <link>https://soishii2026.github.io/satoshi-naimen-hoshuron/</link>
+    <description>保守の内側から、統治の節度を問う。産経新聞「政界十六夜」コラムニスト 石井聡 の政治コラム「内側からの保守論」。</description>
+    <language>ja</language>
+    <copyright>Copyright 2026 石井聡</copyright>
+    <managingEditor>sois2004@gmail.com (石井聡)</managingEditor>
+    <webMaster>sois2004@gmail.com (石井聡)</webMaster>
+    <lastBuildDate>Sat, 18 Apr 2026 09:00:00 +0900</lastBuildDate>
+    <ttl>1440</ttl>
+    <atom:link href="https://soishii2026.github.io/satoshi-naimen-hoshuron/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <image>
+      <url>https://soishii2026.github.io/satoshi-naimen-hoshuron/favicon.png</url>
+      <title>内側からの保守論</title>
+      <link>https://soishii2026.github.io/satoshi-naimen-hoshuron/</link>
+    </image>
+
+    <item>
+      <title>南鳥島に、何を積み上げるのか</title>
+      <link>https://soishii2026.github.io/satoshi-naimen-hoshuron/article.html</link>
+      <guid isPermaLink="true">https://soishii2026.github.io/satoshi-naimen-hoshuron/article.html</guid>
+      <pubDate>Sat, 18 Apr 2026 09:00:00 +0900</pubDate>
+      <dc:creator>石井聡</dc:creator>
+      <category>国土・安全保障</category>
+      <category>エネルギー安保</category>
+      <description><![CDATA[東京から約1,900km。太平洋の最果ての孤島・南鳥島に、今、計算された「積み上げ」が静かに進んでいる。レアアース開発、自衛隊拠点化、そして核廃棄物処分場選定——3つの国家意思が、同じ小さな島に重なりつつある。「住民がいないから反対が出にくい」という論理は、民主的な合意形成の基礎を意図的に迂回しているに過ぎない。]]></description>
+      <content:encoded><![CDATA[
+        <p>東京から約1,900km。太平洋の最果ての孤島・南鳥島に、今、計算された「積み上げ」が静かに進んでいる。レアアース開発、自衛隊拠点化、そして核廃棄物処分場選定——3つの国家意思が、同じ小さな島に重なりつつある。</p>
+        <p>2026年4月13日、小笠原村の渋谷正昭村長は、経済産業省からの要請を受け、南鳥島での文献調査受け入れを表明した。交付金は最大20億円。住民がいない。国有地だ。経産省がこの島を選んだ論理は、あまりにも露骨だ。</p>
+        <p>日本が今問われているのは、資源でも安保でも原子力政策でもない。中心が周縁に重荷を預けて黙っていられる政治の感覚そのものだ。</p>
+      ]]></content:encoded>
+    </item>
+
+    <item>
+      <title>「量はある、だが届かない」——ホルムズ危機で露呈した可用性の崩壊</title>
+      <link>https://soishii2026.github.io/satoshi-naimen-hoshuron/hormuz.html</link>
+      <guid isPermaLink="true">https://soishii2026.github.io/satoshi-naimen-hoshuron/hormuz.html</guid>
+      <pubDate>Sat, 18 Apr 2026 10:00:00 +0900</pubDate>
+      <dc:creator>石井聡</dc:creator>
+      <category>ホルムズ危機</category>
+      <category>エネルギー安保</category>
+      <category>経済安保</category>
+      <description><![CDATA[「日本全体として必要となる量は確保できている」——政府はそう説明する。だがホルムズ危機が暴いたのは、総量の不足よりも深い機能不全だった。ガソリン店頭価格は3月2日の158円から16日には190円超へ、わずか2週間で32円の上昇。必要なのは総量の神話ではなく、可用性の設計である。]]></description>
+      <content:encoded><![CDATA[
+        <p>「日本全体として必要となる量は確保できている」——政府はそう説明する。だがホルムズ危機が暴いたのは、総量の不足よりも深い機能不全だった。必要な場所に、必要な日に、使える形で届かない。危機の本質はそこにある。</p>
+        <p>ガソリン店頭価格は3月2日の1リットル158円から、16日には190円超まで上がった。わずか2週間で32円の上昇である。国土交通省には約400事業者から「これまで通りの供給がなされていない」との声が寄せられた。</p>
+        <p>結局、今回の危機が示したのは、国家備蓄の多寡だけでは国民生活は守れないという事実である。必要なのは総量の神話ではなく、可用性の設計である。</p>
+      ]]></content:encoded>
+    </item>
+
+  </channel>
+</rss>
