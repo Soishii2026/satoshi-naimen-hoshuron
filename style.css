@@ -241,12 +241,18 @@ ul { list-style: none; }
 /* ─── Hero ─── */
 .hero {
   padding: 64px 24px 56px;
-  max-width: 1200px;
+  max-width: var(--max-width, 1200px);
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
   position: relative;
+}
+
+/* wrapper for the hero section */
+.hero-section {
+  background: var(--bg-1);
+  border-bottom: 1px solid var(--border);
 }
 
 .hero::before {
