@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="人間が自らの手で引き金を引かなくなったとき、文明は進歩するのではない。責任という最後の防波堤の崩壊が始まる——ＡＩと戦争と国家責任の問題を、保守の立場から問う。石井聡・内側からの保守論。">
+  <meta name="author" content="石井聡">
+  <meta property="og:title" content="引き金を引くのは誰か——ＡＩと戦争、そして責任を失う文明 — 内側からの保守論">
+  <meta property="og:description" content="人間が自らの手で引き金を引かなくなったとき、文明は進歩するのではない。そのとき始まるのは、責任という最後の防波堤の崩壊である。">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-04-21">
+  <meta property="article:author" content="石井聡">
+  <title>引き金を引くのは誰か — 内側からの保守論</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" type="application/rss+xml" title="内側からの保守論 RSS" href="rss.xml">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230b0e17'/><text x='50%25' y='56%25' font-size='20' text-anchor='middle' dominant-baseline='middle' fill='%23c9a85c' font-family='serif'>保</text></svg>">
+  <style>
+    .diagram-wrap {
+      margin: 48px 0;
+      padding: 40px 24px 36px;
+      background: var(--bg-2);
+      border: 1px solid var(--border-gold);
+      border-radius: 4px;
+    }
+    .diagram-title {
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .diagram-svg {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+    .diagram-caption {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      color: var(--text-2);
+      text-align: center;
+      margin-top: 20px;
+      letter-spacing: 0.05em;
+    }
+    .article-body .note-ref {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      color: var(--text-2);
+      line-height: 1.8;
+    }
+    .article-body .note-ref a {
+      color: var(--gold-dim);
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+<a href="#main" class="skip-link">本文へ</a>
+
+<!-- ─── Header ─── -->
+<header class="site-header">
+  <div class="note-ribbon">
+    <span>産経新聞「政界十六夜」連載中</span>
+    <a href="https://note.com/s_ishii" target="_blank" rel="noopener">
+      <span class="note-icon">n</span>
+      note でフォロー
+    </a>
+  </div>
+  <div class="masthead">
+    <div class="masthead-brand">
+      <a href="index.html" class="masthead-title">内側からの<span>保守論</span></a>
+      <p class="masthead-tagline">保守の内側から、統治の節度を問う</p>
+    </div>
+    <nav class="masthead-nav" aria-label="メインナビゲーション">
+      <a href="index.html#articles">記事一覧</a>
+      <a href="index.html#categories">カテゴリ</a>
+      <a href="index.html#about">筆者について</a>
+      <a href="rss.xml">RSS</a>
+      <a href="https://note.com/s_ishii" target="_blank" rel="noopener" style="color:var(--gold)">note →</a>
+      <a href="./ai-tools/ai-saigo-prompt.md" style="color:var(--gold);border:1px solid var(--gold);padding:2px 9px;border-radius:3px;font-size:0.85em;">AI西郷</a>
+    </nav>
+    <button class="hamburger" aria-label="メニュー" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="モバイルナビゲーション">
+    <a href="index.html#articles">← 記事一覧に戻る</a>
+    <a href="index.html#categories">カテゴリ</a>
+    <a href="index.html#about">筆者について</a>
+    <a href="rss.xml">RSS</a>
+    <a href="https://note.com/s_ishii" target="_blank" rel="noopener" style="color:var(--gold)">note でフォロー →</a>
+    <a href="./ai-tools/ai-saigo-prompt.md" style="color:var(--gold);">AI西郷 〜南洲の精神で志を問う〜</a>
+  </nav>
+</header>
+
+<!-- ─── Article Page ─── -->
+<div class="article-page" id="main">
+
+  <main class="article-main" role="main">
+
+    <a href="index.html#articles" class="back-link" aria-label="記事一覧に戻る">← 記事一覧</a>
+
+    <!-- Article Header -->
+    <header class="article-header">
+      <p class="article-kicker">AI・技術 / 安全保障 / 2026.04.21</p>
+
+      <h1 class="article-title">引き金を引くのは誰か</h1>
+      <p style="font-family:var(--font-serif);font-size:1.05rem;color:var(--text-1);margin-top:8px;font-style:italic;">――ＡＩと戦争、そして責任を失う文明</p>
+
+      <div class="article-byline">
+        <span class="byline-author">石井 聡</span>
+        <span class="byline-dot">●</span>
+        <time class="byline-date" datetime="2026-04-21">2026年4月21日</time>
+        <span class="byline-dot">●</span>
+        <span style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2)">約15分</span>
+        <div class="byline-tags">
+          <span class="tag">AI・技術</span>
+          <span class="tag">安全保障</span>
+          <span class="tag">国家責任</span>
+          <span class="tag">保守論</span>
+        </div>
+      </div>
+
+      <blockquote class="article-lead">
+        人間が自らの手で引き金を引かなくなったとき、文明は進歩するのではない。そのとき始まるのは、責任という最後の防波堤の崩壊である。
+      </blockquote>
+    </header>
+
+    <figure class="article-hero" id="hero-hikigane">
+      <img src="images/hikigane-hero.jpg" alt="引き金を引くのは誰か——ＡＩと戦争、そして責任を失う文明" loading="eager"
+           onerror="document.getElementById('hero-hikigane').style.display='none'">
+    </figure>
+
+    <!-- Article Body -->
+    <article class="article-body">
+
+      <p class="first-para">われわれは近年、二つの現象を別々の問題として論じることに慣れすぎた。一つは人工知能の急速な発達であり、いま一つは戦争の技術化・遠隔化である。しかし本来、この二つは別個の問題ではない。</p>
+
+      <p>ＡＩとは判断の外部化であり、戦争とは暴力の外部化である。そして両者に共通する核心は、人間が自らの行為の帰結を引き受けなくなるという一点にある。</p>
+
+      <p>このことを、いま世界の公的言語の中で比較的明瞭に語っているのが、教皇レオ14世である。教皇はＡＩを単なる技術ではなく、「人間の尊厳」「責任ある判断」「倫理的統治」の問題として位置づけている。2025年6月のメッセージでも、ＡＩの「本来的に倫理的な側面」と責任あるガバナンスの必要を明確に述べた。5月の枢機卿団への演説では、ＡＩを新たな産業革命になぞらえつつ、人間の尊厳、正義、労働を守る課題として語っている。</p>
+
+      <p>この種の発言は、日本ではしばしば「宗教者らしい理想論」として片づけられがちである。だが、そうした受け止め方は浅い。なぜなら、教皇の言葉が示しているのは単なる善意ではなく、文明の持続を可能にする最低限の条件だからである。</p>
+
+      <!-- 図解 -->
+      <div class="diagram-wrap">
+        <p class="diagram-title">図解：ＡＩと戦争と国家責任のフロー</p>
+        <svg class="diagram-svg" viewBox="0 0 760 300" width="760" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="人間からAI、AIから国家、国家から結果へのフロー。責任は誰のものでもない。">
+
+          <!-- 人間アイコン -->
+          <circle cx="72" cy="108" r="22" fill="none" stroke="#888" stroke-width="2.5"/>
+          <circle cx="72" cy="96" r="9" fill="#888"/>
+          <path d="M52 130 Q72 118 92 130" fill="none" stroke="#888" stroke-width="2.5" stroke-linecap="round"/>
+          <text x="72" y="152" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="14" fill="#b8b0a0">人間</text>
+
+          <!-- 矢印① -->
+          <line x1="100" y1="108" x2="168" y2="108" stroke="#888" stroke-width="2" marker-end="url(#arrow-gray)"/>
+          <text x="134" y="98" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="11" fill="#706860">①</text>
+
+          <!-- AIアイコン -->
+          <rect x="180" y="82" width="52" height="52" rx="6" fill="none" stroke="#b8b0a0" stroke-width="2.5"/>
+          <rect x="188" y="90" width="36" height="36" rx="3" fill="none" stroke="#b8b0a0" stroke-width="1.5"/>
+          <text x="206" y="113" text-anchor="middle" font-family="'Playfair Display',Georgia,serif" font-size="15" font-weight="700" fill="#eae5d8">AI</text>
+          <line x1="192" y1="82" x2="192" y2="76" stroke="#b8b0a0" stroke-width="2"/>
+          <line x1="206" y1="82" x2="206" y2="76" stroke="#b8b0a0" stroke-width="2"/>
+          <line x1="220" y1="82" x2="220" y2="76" stroke="#b8b0a0" stroke-width="2"/>
+          <line x1="192" y1="134" x2="192" y2="140" stroke="#b8b0a0" stroke-width="2"/>
+          <line x1="206" y1="134" x2="206" y2="140" stroke="#b8b0a0" stroke-width="2"/>
+          <line x1="220" y1="134" x2="220" y2="140" stroke="#b8b0a0" stroke-width="2"/>
+          <text x="206" y="156" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="14" fill="#b8b0a0">ＡＩ</text>
+
+          <!-- 矢印② -->
+          <line x1="238" y1="108" x2="318" y2="108" stroke="#888" stroke-width="2" marker-end="url(#arrow-gray)"/>
+          <text x="278" y="98" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="11" fill="#706860">②</text>
+
+          <!-- 国家アイコン（国会議事堂風） -->
+          <rect x="332" y="100" width="52" height="36" rx="2" fill="none" stroke="#b8b0a0" stroke-width="2"/>
+          <rect x="349" y="88" width="18" height="14" rx="2" fill="none" stroke="#b8b0a0" stroke-width="1.8"/>
+          <rect x="354" y="80" width="8" height="10" rx="1" fill="none" stroke="#b8b0a0" stroke-width="1.5"/>
+          <rect x="338" y="106" width="8" height="18" fill="#1f2a40" stroke="#b8b0a0" stroke-width="1"/>
+          <rect x="352" y="106" width="12" height="18" fill="#1f2a40" stroke="#b8b0a0" stroke-width="1"/>
+          <rect x="370" y="106" width="8" height="18" fill="#1f2a40" stroke="#b8b0a0" stroke-width="1"/>
+          <text x="358" y="156" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="14" fill="#b8b0a0">国家</text>
+
+          <!-- 矢印③ (グレー、薄め) -->
+          <line x1="390" y1="108" x2="468" y2="108" stroke="#555" stroke-width="2.5" marker-end="url(#arrow-dim)"/>
+          <text x="430" y="98" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="11" fill="#706860">③</text>
+
+          <!-- 結果アイコン（爆発・赤） -->
+          <polygon points="530,65 540,90 560,72 552,96 578,88 564,110 590,110 572,128 592,138 568,140 574,164 552,150 548,176 534,154 518,172 518,148 494,158 504,136 480,132 502,118 484,104 510,108 506,82 526,94" fill="#cc2222" opacity="0.9"/>
+          <polygon points="530,78 538,95 552,82 547,100 564,94 555,112 572,112 560,124 574,132 556,134 560,152 546,142 543,160 534,146 524,158 524,142 508,150 514,134 498,130 514,120 502,110 520,114 518,96 530,104" fill="#ee3333"/>
+          <text x="534" y="192" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="14" font-weight="700" fill="#eae5d8">結果</text>
+
+          <!-- 責任の線（点線） -->
+          <text x="206" y="185" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="14" font-weight="700" fill="#706860">責任</text>
+          <line x1="238" y1="180" x2="370" y2="180" stroke="#888" stroke-width="1.5" stroke-dasharray="4,4"/>
+          <text x="380" y="185" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="16" fill="#cc4444">×</text>
+
+          <!-- 責任は誰のものでもない -->
+          <text x="430" y="230" text-anchor="middle" font-family="'Noto Serif JP',serif" font-size="17" font-weight="700" fill="#eae5d8">責任は誰のものでもない</text>
+
+          <!-- defs -->
+          <defs>
+            <marker id="arrow-gray" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#888"/>
+            </marker>
+            <marker id="arrow-dim" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+            </marker>
+          </defs>
+        </svg>
+        <p class="diagram-caption">人間の判断がＡＩに委ねられ、国家の決定に変換されるとき、責任の所在は霧散する。</p>
+      </div>
+
+      <figure class="article-figure">
+        <img src="images/hikigane-fig.jpg" alt="教皇レオ14世とＡＩ倫理——責任ある統治の問い" loading="lazy"
+             onerror="this.closest('figure').style.display='none'">
+      </figure>
+
+      <h2>倫理は理想ではなく、文明の骨格である</h2>
+
+      <p>保守の立場から見るなら、まず確認すべきことがある。倫理とは、現実に対する甘い感傷ではない。それはむしろ、歴史の中で繰り返し生じた破局と混乱ののちに、ようやく人類が掴み取った統治の抑制原理である。</p>
+
+      <p>保守思想は、本来、抽象理念への陶酔を嫌う。しかしそれは、原理そのものを軽んじるという意味ではない。むしろ逆である。原理なき現実主義が、最後にはただの便宜主義に堕することを、歴史から知っている。それが保守の立場である。</p>
+
+      <p>エドマンド・バークが見抜いていたのは、政治とは単なる制度設計ではなく、「死者・生者・未生者」を結ぶ秩序の継承だという事実であった。国家は、目先の効率だけで動かしてよい機械ではない。そこには、言葉にしにくいが、決して失ってはならない形式がある。</p>
+
+      <ul style="list-style:none;padding-left:1.5em;margin:1.2em 0;">
+        <li style="margin-bottom:0.5em;">・権力には限度があること</li>
+        <li style="margin-bottom:0.5em;">・人命は手段化されてはならぬこと</li>
+        <li>・決断には責任の主体が伴わねばならぬこと</li>
+      </ul>
+
+      <p>こうした規範は、近代の贅沢ではない。人間社会が人間社会として崩れ切らないための骨組みである。</p>
+
+      <p>それゆえに、教皇レオ14世の語る倫理を、単なる宗教的道徳として外に置くべきではない。それはむしろ、近代以後の政治がみずからの暴走を抑えるために、必死に保持してきた文明的自制の言語にほかならない。</p>
+
+      <p>教皇のＡＩ論も本質は同じである。ＡＩの利益や利便ではなく、まず「何が人間を人間たらしめるのか」を問うている。2025年1月に公表されたバチカン文書「Antiqua et nova」も、情報処理能力と人間の知恵を混同してはならないと論じ、技術評価の基準を人間の尊厳と全人的発展に置いている。ここには、単なる技術規制論を超えた人間理解がある。</p>
+
+      <h2>ＡＩは判断を代行するが、責任までは代行しない</h2>
+
+      <p>ＡＩの本質的な危うさは、しばしば誤認されている。多くの人は、ＡＩの危険を「精度」の問題として語る。誤作動するか。偏見を含むか。暴走するか。たしかにそれらは重要である。だが、もっと深いところにある本当の危険は、人間が判断することをやめる点にある。</p>
+
+      <p>判断とは、単に最適解を計算することではない。</p>
+
+      <ul style="list-style:none;padding-left:1.5em;margin:1.2em 0;">
+        <li style="margin-bottom:0.5em;">・どの価値を優先するか</li>
+        <li style="margin-bottom:0.5em;">・誰の不利益を引き受けるか</li>
+        <li>・どの犠牲を許容し、どこに踏みとどまるか</li>
+      </ul>
+
+      <p>そうした問いに、自ら名をもって答えることである。ここに人格があり、ここに政治がある。</p>
+
+      <p>ＡＩは、判断の材料を提示できる。処理を高速化できる。だが、責任の主体にはなれない。責任とは、アルゴリズムの出力ではなく、最終的に「私が決めた」と言える者にのみ宿るからである。</p>
+
+      <p>にもかかわらず、現代社会はこの一点を曖昧にしつつある。企業は「ＡＩの推奨」を盾にする。官僚機構は「データに基づく判断」を言い訳にする。政治は「専門技術の要請」を理由に主体的決断を回避する。こうして責任は、誰のものでもないものへと霧散していく。</p>
+
+      <p>これは保守がもっとも警戒すべき事態である。保守とは、責任を制度に埋没させない思想だからだ。制度がいかに精巧でも、最後には誰かが引き受けねばならぬ。決断の顔が消えた政治は、いずれ国民に対して無責任になる。そして無責任な統治は、たとえ柔らかい言葉をまとっていても、必ず専横へ近づくのである。</p>
+
+      <h2>戦争の遠隔化は、暴力の道徳的距離を広げる</h2>
+
+      <p>この問題は、戦争においてさらに深刻になる。戦争はもともと、国家が暴力を制度化したものである。だからこそ古来、そこには厳格な抑制が必要とされた。武力行使は例外でなければならず、目的は限定されねばならず、民間人は守られねばならず、指揮命令の責任は明確でなければならない。</p>
+
+      <p>こうした原則は、単なるきれいごとではない。暴力を完全には廃し得ぬ人間社会が、その暴力に呑み込まれないための最低限の堤防である。</p>
+
+      <p>ところが現代の戦争は、その堤防を静かに侵食している。遠隔操作兵器、無人機、自律化システム、ＡＩによる目標識別。技術は、戦争を効率化し、同時に道徳的に見えにくくする。敵は画面上の点となり、死は数値となり、破壊はオペレーションと呼ばれる。引き金を引く指は、もはや土と血の現場に触れない。</p>
+
+      <p>だが、それで暴力の本質が変わるわけではない。人を殺傷するという事実は、遠隔化されても消えない。むしろ、現場との距離が開けば開くほど、決断者は自らの行為を過小評価しやすくなる。</p>
+
+      <p>ここに戦争の技術化が持つ最大の危険がある。暴力が容易になるのではない。暴力に伴う良心の摩擦が消えていくのである。</p>
+
+      <p>保守の立場は、この点で曖昧であってはならない。保守は、国防を否定しない。抑止力を否定しない。武力の必要性から目を背けるべきでもない。国家は国民の生命と領土を守る責務を負っており、そのための力を備えることは、むしろ統治の当然の責任である。</p>
+
+      <p>しかし同時に、保守は知っていなければならない。力は、それ自体が正義なのではない。責任によってのみ統御されるのである。この統御を失ったとき、国家は国家であることをやめ、単なる巨大な実力装置へと変質する。</p>
+
+      <p>ゆえに、戦争の技術化を前にして保守が守るべきものは、平和主義の空疎な唱和ではなく、暴力の最終責任は人間が負うという原則である。人間が命じ、人間が決断し、人間が歴史の前に裁かれる。この形式を崩してはならない。</p>
+
+      <h2>教皇の言葉が「整理されて聞こえる」理由</h2>
+
+      <p>多くの人が、教皇レオ14世の言葉に接して、「この人の話は妙に整理されて聞こえる」と感じるのはなぜか。それは、彼の議論が巧みだからというだけではない。彼が責任と時間軸を外さないからである。</p>
+
+      <p>現代政治は、短期の成果に追い立てられている。世論、選挙、株価、支持率、外交上の即効性。すべてが短い時間で評価される。その結果、政治は「何が正しいか」よりも「何がいま通るか」に傾斜しやすい。倫理は遅い。原理は説明に時間がかかる。したがって、それらはしばしば脇へ押しやられる。</p>
+
+      <p>これに対し、教皇の言葉は、常に長い時間の中に置かれている。人間とは何か。若者はいかに育つべきか。真理と善への志向をどう守るか。何世代にもわたって、どのような社会を残すのか。</p>
+
+      <p>バチカンのＡＩ文書も、若者の知的・道徳的成熟を損なってはならないこと、情報への接近と知恵を混同してはならないことを強調している。この視座は、実はきわめて保守的である。なぜなら保守とは、目の前の便利さよりも、共同体が長期にわたり生き延びる条件を重んじる立場だからである。</p>
+
+      <p>教育とは何か。伝統とは何か。国家とは、いかなる人格形成を可能にする場であるべきか。こうした問いなしに保守を名乗るなら、それは単なる反射的現状維持にすぎない。</p>
+
+      <p>教皇の発言が示しているのは、政策そのものではない。政策以前の秩序感覚である。何をしてはならないのか。何を越えてはならないのか。その線が曖昧になった社会では、結局どの政策も、ただの便法に成り下がる。</p>
+
+      <h2>日本の保守が失ってはならぬもの</h2>
+
+      <p>では、日本の保守はこの問題をどう受け止めるべきか。重要なのは、教皇の言葉をそのまま輸入することではない。わが国にはわが国の歴史があり、宗教文化があり、国家形成の文脈がある。日本はローマではない。したがって、教会の言語をそのまま日本の政治言語に置き換えるのは適切ではない。</p>
+
+      <p>しかし、それでもなお学ぶべきものはある。それは、公的倫理を語る覚悟である。</p>
+
+      <p>日本では長らく、倫理は言語化されなくとも共同体の内部で作動してきた。家、地域、学校、職場、祭祀、慣習。明文化されぬ抑制が、人を人たらしめる枠を支えていた。だが、その基盤が弱まったいま、なお従来どおり「言わずとも分かる」に依存することはできない。</p>
+
+      <p>特にＡＩや戦争のように、技術と国家が結びつく巨大な問題においては、倫理を沈黙のうちに期待するだけでは足りない。</p>
+
+      <p>保守がいま回復すべきは、道徳説教ではない。また、空疎な精神論でもない。必要なのは、国家、技術、軍事、教育を貫いて、人間が責任主体であり続けるための原理を、明確な言葉で公に語ることである。</p>
+
+      <p>ＡＩは人間の補助であって代替ではない。戦争は国家の権利ではなく、最後の責務である。武力は抑止のために備えるが、行使の責任は人間が負う。教育は適応能力の育成にとどまらず、善悪を判断する人格を養うものである。こうしたことを、曖昧なままにしてはならない。</p>
+
+      <p>保守とは、単に左派への反発ではない。人間観、国家観、歴史観を持つことだ。そしてその中心には常に、「自由とは責任を負いうる者にのみ許される」という厳粛な認識がなければならない。</p>
+
+      <h2>倫理は政策の代用品ではない。だが、政策の基準である</h2>
+
+      <p>もちろん、ここで誤ってはならぬ。倫理は政策の代わりにはならない。教皇の言葉が、そのまま安全保障政策になるわけではない。国家は現実を生きる。抑止も、同盟も、軍備も、情報も必要である。理想だけで国民は守れない。</p>
+
+      <p>だが、だからといって倫理が不要になるわけではない。むしろ逆である。現実に手を汚さざるを得ない政治だからこそ、何を越えてはならぬかを示す基準が要る。基準なき現実主義は、やがて自らの手段に支配される。</p>
+
+      <p>ゆえに、保守の態度は明快でなければならない。教皇の倫理を政策の代用品とは見なさない。しかし、政策を点検し、統治の逸脱を戒める上位の尺度としては、真剣に受け止める。</p>
+
+      <p>この距離感こそ成熟である。宗教的権威に政治を委ねるのではない。しかし政治が、倫理の問いから逃げることも許さない。この二重の緊張を引き受けることが、保守の務めである。</p>
+
+      <h2>結局、問われているのは文明の品位である</h2>
+
+      <p>ＡＩと戦争。この二つは、現代世界における技術と権力の先端である。そしてその先端で、いま静かに失われつつあるのは、人間が人間として決断し、その帰結を引き受けるという古く厳しい形式である。</p>
+
+      <p>便利になることは、成熟ではない。強くなることも、ただちに高貴さを意味しない。文明の真価は、どれほど強力な手段を持つかではなく、その手段を前にしてなお、どこで踏みとどまれるかにある。</p>
+
+      <p>だからこそ、最後に問われるのは一つしかない。ＡＩがどこまで賢くなるかではない。兵器がどこまで精密になるかでもない。国家がどこまで効率的に敵を制圧できるかでもない。<strong>誰が、その決断を引き受けるのか。</strong></p>
+
+      <p>この問いを失ったとき、政治は技術の下請けとなり、戦争は操作となり、人間は自ら作った装置の陰に隠れる。そのような社会は、豊かであっても、もはや高貴ではない。</p>
+
+      <p>保守が守るべきものは、古い制度の残骸ではない。人間が責任を負う主体であり続けるという、文明のもっとも重い約束である。その約束を守るかぎりにおいてのみ、ＡＩもまた国家も、なお人間に仕える。</p>
+
+      <p>それを失うなら、われわれは進歩するのではない。ただ、立派な言葉をまといながら、野蛮へと後退するだけである。</p>
+
+      <p style="text-align:right;font-family:var(--font-sans);font-size:0.85rem;color:var(--text-2);margin-top:32px;">日本の保守政治が今問われているのは、責任の言語を取り戻せるかどうかだ。</p>
+
+      <div class="note-ref">
+        <p>※参考資料</p>
+        <p>教皇レオ14世「人工知能、倫理、およびコーポレート・ガバナンス 参加者各位へ」（2025年6月17日）<br>
+        <a href="https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250617-messaggio-ia.html" target="_blank" rel="noopener">https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250617-messaggio-ia.html</a></p>
+      </div>
+
+    </article>
+
+  </main>
+
+  <!-- ─── Sidebar ─── -->
+  <aside class="sidebar" aria-label="サイドバー">
+    <div class="sidebar-block">
+      <p class="sidebar-block-title">筆者について</p>
+      <p class="author-name">石井　聡</p>
+      <p class="author-role">CEO / 産経新聞「政界十六夜」コラムニスト</p>
+      <p class="author-bio">保守の内側から自民党・保守陣営を問うコラムニスト。主要テーマは日本政治の内実、国家象徴の扱い、安保・外交・エネルギー安全保障。「一発も撃たれずに負ける」状況を最も警戒する。</p>
+      <a href="https://note.com/s_ishii" target="_blank" rel="noopener" class="note-cta">note でフォローする →</a>
+    </div>
+    <div class="sidebar-block">
+      <p class="sidebar-block-title">関連記事</p>
+      <ul style="display:flex;flex-direction:column;gap:12px;">
+        <li><a href="buki.html" style="font-family:var(--font-sans);font-size:0.8rem;color:var(--text-1);line-height:1.6;transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-1)'">兵器庫ではなく、政治の中でしか行えないこと</a></li>
+        <li><a href="hormuz50.html" style="font-family:var(--font-sans);font-size:0.8rem;color:var(--text-1);line-height:1.6;transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-1)'">「ホルムズ危機50日」——戦争はもう「撃たない」</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-block" style="background:transparent;border:1px solid var(--border-gold);">
+      <p style="font-family:var(--font-serif);font-size:0.88rem;color:var(--text-1);line-height:1.9;font-style:italic;">「誰が、その決断を引き受けるのか。この問いを失ったとき、政治は技術の下請けとなる」</p>
+      <p style="font-family:var(--font-sans);font-size:0.68rem;color:var(--gold-dim);margin-top:12px;letter-spacing:0.1em;">— 石井聡</p>
+    </div>
+  </aside>
+
+</div>
+
+<!-- ─── Footer ─── -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand-name">内側からの保守論</p>
+        <p class="footer-brand-tagline">保守の内側から、統治の節度を問う</p>
+        <div class="footer-links">
+          <a href="index.html#articles">記事一覧</a>
+          <a href="rss.xml">RSS</a>
+          <a href="https://note.com/s_ishii" target="_blank" rel="noopener">note</a>
+        </div>
+      </div>
+      <div>
+        <p style="font-family:var(--font-sans);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">最近の記事</p>
+        <ul style="display:flex;flex-direction:column;gap:8px;">
+          <li><a href="hikigane.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--gold-dim);transition:color 0.2s">引き金を引くのは誰か</a></li>
+          <li><a href="hormuz50.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">「ホルムズ危機50日」</a></li>
+          <li><a href="buki.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">兵器庫ではなく、政治の中でしか行えないこと</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 石井聡 / 内側からの保守論. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scroll-top" aria-label="ページ先頭へ" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+function toggleMobileNav() {
+  document.getElementById('mobile-nav').classList.toggle('open');
+}
+const scrollBtn = document.getElementById('scroll-top');
+window.addEventListener('scroll', () => {
+  scrollBtn.classList.toggle('visible', window.scrollY > 400);
+});
+const fadeEls = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+  });
+}, { threshold: 0.1 });
+fadeEls.forEach(el => observer.observe(el));
+
+/* Progress bar */
+window.addEventListener('scroll', () => {
+  const el = document.getElementById('progress-bar');
+  if (el) {
+    const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
+    el.style.width = pct + '%';
+  }
+});
+</script>
+</body>
+</html>
