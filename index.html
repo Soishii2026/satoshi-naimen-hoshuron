@@ -334,28 +334,32 @@
     <div class="sidebar-block" id="categories">
       <p class="sidebar-block-title">カテゴリ</p>
       <ul class="cat-list" role="list">
-        <li class="cat-item" onclick="filterArticles('専守防衛')">
-          <span>専守防衛・抑止論</span>
-          <span class="cat-count">1</span>
-        </li>
-        <li class="cat-item" onclick="filterArticles('安全保障')">
+        <li class="cat-item" onclick="filterByCategory(this,'安全保障')">
           <span>国土・安全保障</span>
+          <span class="cat-count">4</span>
+        </li>
+        <li class="cat-item" onclick="filterByCategory(this,'専守防衛')">
+          <span>専守防衛・抑止論</span>
           <span class="cat-count">2</span>
         </li>
-        <li class="cat-item" onclick="filterArticles('エネルギー')">
+        <li class="cat-item" onclick="filterByCategory(this,'エネルギー')">
           <span>エネルギー安保</span>
+          <span class="cat-count">3</span>
+        </li>
+        <li class="cat-item" onclick="filterByCategory(this,'ホルムズ')">
+          <span>ホルムズ危機</span>
           <span class="cat-count">2</span>
         </li>
-        <li class="cat-item" onclick="filterArticles('ホルムズ')">
-          <span>ホルムズ危機</span>
-          <span class="cat-count">1</span>
-        </li>
-        <li class="cat-item" onclick="filterArticles('経済安保')">
+        <li class="cat-item" onclick="filterByCategory(this,'経済安保')">
           <span>経済安全保障</span>
+          <span class="cat-count">2</span>
+        </li>
+        <li class="cat-item" onclick="filterByCategory(this,'AI')">
+          <span>AI・技術</span>
           <span class="cat-count">1</span>
         </li>
       </ul>
-      <button onclick="filterArticles('')"
+      <button onclick="clearCategoryFilter()"
               style="margin-top:12px;font-family:var(--font-sans);font-size:0.72rem;color:var(--text-2);background:none;border:none;cursor:pointer;padding:0;transition:color 0.2s"
               onmouseover="this.style.color='var(--gold)'"
               onmouseout="this.style.color='var(--text-2)'">
@@ -464,6 +468,19 @@ function filterArticles(query) {
   } else {
     noResults.classList.add('hidden');
   }
+}
+
+/* ─── Category Filter ─── */
+function filterByCategory(el, keyword) {
+  document.querySelectorAll('.cat-item').forEach(item => item.classList.remove('active'));
+  el.classList.add('active');
+  filterArticles(keyword);
+  document.getElementById('search-input').value = '';
+}
+
+function clearCategoryFilter() {
+  document.querySelectorAll('.cat-item').forEach(item => item.classList.remove('active'));
+  filterArticles('');
 }
 
 /* ─── Scroll to top ─── */

@@ -594,6 +594,8 @@ ul { list-style: none; }
   transition: color 0.2s;
 }
 .cat-item:hover { color: var(--gold); }
+.cat-item.active { color: var(--gold); font-weight: 600; }
+.cat-item.active .cat-count { color: var(--gold); }
 .cat-count {
   font-family: var(--font-display);
   font-size: 0.72rem;
