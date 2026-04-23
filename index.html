@@ -65,6 +65,9 @@
       自民党の「保守」を外から批判することは容易い。だがそれは届かない。本サイトは、保守を支持しながらも、その失速・逸脱・節度の喪失を内側から問う立場に立つ。日本政治・安全保障・国家象徴の扱いについて、数字と論理で論じる。
     </p>
   </div>
+  <div class="hero-map" aria-hidden="true">
+    <img src="images/hero-japan-map.png" alt="" class="hero-map-img">
+  </div>
 </div>
 </section>
 
@@ -91,14 +94,22 @@
   <section id="articles" aria-label="記事一覧">
     <div class="section-header">
       <h2 class="section-title">Articles</h2>
-      <span class="section-count" id="article-count">6 本</span>
+      <span class="section-count" id="article-count">7 本</span>
     </div>
 
     <nav class="article-toc" aria-label="記事インデックス">
       <ol class="article-toc-list">
         <li class="article-toc-item">
-          <a href="anpo-ronso.html">
+          <a href="triage.html">
             <span class="toc-num">01</span>
+            <span class="toc-date">2026.04.23</span>
+            <span class="toc-title">国家はトリアージを語れるか——飽和攻撃が突きつける政治の空白</span>
+            <span class="toc-tag">安全保障</span>
+          </a>
+        </li>
+        <li class="article-toc-item">
+          <a href="anpo-ronso.html">
+            <span class="toc-num">02</span>
             <span class="toc-date">2026.04.21</span>
             <span class="toc-title">安全保障論争という名の信仰告白——なぜ議論は噛み合わないのか</span>
             <span class="toc-tag">安全保障</span>
@@ -114,7 +125,7 @@
         </li>
         <li class="article-toc-item">
           <a href="hormuz50.html">
-            <span class="toc-num">03</span>
+            <span class="toc-num">04</span>
             <span class="toc-date">2026.04.19</span>
             <span class="toc-title">「ホルムズ危機50日」——戦争はもう「撃たない」、それでも国家は壊れる</span>
             <span class="toc-tag">経済安保</span>
@@ -122,7 +133,7 @@
         </li>
         <li class="article-toc-item">
           <a href="buki.html">
-            <span class="toc-num">04</span>
+            <span class="toc-num">05</span>
             <span class="toc-date">2026.04.19</span>
             <span class="toc-title">兵器庫ではなく、政治の中でしか行えないこと</span>
             <span class="toc-tag">安全保障</span>
@@ -130,7 +141,7 @@
         </li>
         <li class="article-toc-item">
           <a href="article.html">
-            <span class="toc-num">05</span>
+            <span class="toc-num">06</span>
             <span class="toc-date">2026.04.18</span>
             <span class="toc-title">南鳥島に、何を積み上げるのか</span>
             <span class="toc-tag">国土安保</span>
@@ -138,7 +149,7 @@
         </li>
         <li class="article-toc-item">
           <a href="hormuz.html">
-            <span class="toc-num">06</span>
+            <span class="toc-num">07</span>
             <span class="toc-date">2026.04.18</span>
             <span class="toc-title">「量はある、だが届かない」——ホルムズ危機で露呈した可用性の崩壊</span>
             <span class="toc-tag">エネルギー安保</span>
@@ -151,17 +162,41 @@
 
       <!-- Featured: 最新記事 -->
       <article class="article-card featured fade-in"
+               data-title="国家はトリアージを語れるか 飽和攻撃が突きつける政治の空白"
+               data-tags="安全保障 ミサイル防衛 飽和攻撃 保守政治"
+               onclick="location.href='triage.html'">
+        <div class="card-thumb" id="thumb-triage">
+          <img src="images/triage-hero.png" alt="国家はトリアージを語れるか" loading="eager"
+               onerror="document.getElementById('thumb-triage').style.display='none'">
+        </div>
+        <div class="card-meta">
+          <time class="card-date" datetime="2026-04-23">2026.04.23</time>
+          <div class="card-tags">
+            <span class="tag featured-tag">最新</span>
+            <span class="tag">安全保障</span>
+            <span class="tag">ミサイル防衛</span>
+            <span class="tag">保守政治</span>
+          </div>
+        </div>
+        <h3 class="card-title">国家はトリアージを語れるか——飽和攻撃が突きつける政治の空白</h3>
+        <p class="card-excerpt">「全弾防護は困難」と防衛白書は認めた。では何を優先して守るのか。政府は装備を積み上げながら、この問いだけを語らない。語らないことも政治的決断だ——「守るものを決めている国家」だけが抑止力を持つ。</p>
+        <div class="card-footer">
+          <span class="read-time">約10分</span>
+          <span class="read-more">全文を読む <span aria-hidden="true">→</span></span>
+        </div>
+      </article>
+
+      <article class="article-card fade-in"
                data-title="安全保障論争という名の信仰告白 なぜ議論は噛み合わないのか"
                data-tags="安全保障 専守防衛 保守政治 抑止論"
                onclick="location.href='anpo-ronso.html'">
         <div class="card-thumb" id="thumb-anpo">
-          <img src="images/anpo-ronso-hero.jpg" alt="安全保障論争という名の信仰告白" loading="eager"
+          <img src="images/anpo-ronso-hero.jpg" alt="安全保障論争という名の信仰告白" loading="lazy"
                onerror="document.getElementById('thumb-anpo').style.display='none'">
         </div>
         <div class="card-meta">
           <time class="card-date" datetime="2026-04-21">2026.04.21</time>
           <div class="card-tags">
-            <span class="tag featured-tag">最新</span>
             <span class="tag">安全保障</span>
             <span class="tag">専守防衛</span>
             <span class="tag">保守政治</span>

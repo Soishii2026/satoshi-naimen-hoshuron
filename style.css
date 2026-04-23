@@ -305,6 +305,24 @@ ul { list-style: none; }
   margin: 16px 0;
 }
 
+/* ─── Hero Map ─── */
+.hero-map {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-map-img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  display: block;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+  opacity: 0.75;
+  filter: brightness(0.9) saturate(0.8);
+}
+
 /* ─── Search ─── */
 .search-wrapper {
   background: var(--bg-2);
@@ -1012,6 +1030,8 @@ ul { list-style: none; }
     align-items: center;
     padding: 80px 24px 72px;
   }
+
+  .hero-map { display: flex; }
 
   .hero::before { font-size: 12rem; right: 40px; top: 16px; }
 
