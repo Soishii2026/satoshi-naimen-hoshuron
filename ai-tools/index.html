@@ -368,9 +368,22 @@
 
     /* ── Responsive ── */
     @media (max-width: 768px) {
-      .hero { grid-template-columns: 1fr; }
-      .hero-portrait { display: none; }
-      .hero-text { padding: 60px 24px; }
+      .hero {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+      }
+      .hero-text { padding: 48px 24px 24px; }
+      .hero-portrait {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 0 24px 40px;
+        min-height: unset;
+      }
+      .hero-portrait img {
+        max-height: 320px;
+        width: auto;
+      }
       .philosophy-grid { grid-template-columns: 1fr; }
       .traits-grid { grid-template-columns: 1fr; }
       .steps { grid-template-columns: 1fr; }
