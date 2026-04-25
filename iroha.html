@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="日新公いろは歌 - 島津忠良公が詠んだ47首。薩摩武士の教典であり、西郷隆盛の思想的根拠のひとつ。">
+<title>日新公いろは歌 - 内側からの保守論</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#080b12;--bg-2:#0f1520;
+  --gold:#c9a85c;--gold-dim:#7a6435;
+  --text-0:#f0ead8;--text-1:#c8bfa8;--text-2:#7a7060;
+  --border:rgba(201,168,92,0.15);
+  --font-serif:'Noto Serif JP','Yu Mincho',serif;
+  --font-sans:'Noto Sans JP',sans-serif;
+  --font-display:'Cormorant Garamond',Georgia,serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text-1);font-family:var(--font-serif);line-height:1.9;min-height:100vh}
+a{color:var(--gold);text-decoration:none;transition:opacity .2s}
+a:hover{opacity:.7}
+.site-nav{position:sticky;top:0;z-index:100;background:rgba(8,11,18,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:56px}
+.nav-brand{font-family:var(--font-serif);font-size:.85rem;font-weight:600;color:var(--text-0);letter-spacing:.05em}
+.nav-brand span{color:var(--gold)}
+.nav-links{display:flex;gap:24px}
+.nav-links a{font-family:var(--font-sans);font-size:.78rem;color:var(--text-2)}
+.hero{position:relative;min-height:480px;display:grid;grid-template-columns:1fr 1fr;align-items:center;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(110deg,var(--bg) 40%,transparent 75%),linear-gradient(to bottom,transparent 70%,var(--bg) 100%);z-index:1}
+.hero-img{position:absolute;right:0;top:0;width:55%;height:100%;object-fit:cover;object-position:center top;filter:sepia(40%) brightness(0.5) contrast(1.1)}
+.hero-text{position:relative;z-index:2;padding:80px 60px 80px 80px}
+.hero-eyebrow{font-family:var(--font-display);font-size:.85rem;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:20px}
+.hero-title{font-family:var(--font-serif);font-size:clamp(2rem,4.5vw,3rem);font-weight:700;color:var(--text-0);line-height:1.3;margin-bottom:8px}
+.hero-subtitle{font-family:var(--font-display);font-size:1rem;font-style:italic;color:var(--gold-dim);margin-bottom:28px;letter-spacing:.05em}
+.hero-desc{font-size:.92rem;color:var(--text-1);max-width:480px;line-height:1.9;border-left:2px solid var(--gold-dim);padding-left:20px}
+.hero-meta{margin-top:28px;font-family:var(--font-sans);font-size:.78rem;color:var(--text-2);display:flex;gap:24px}
+.intro-section{max-width:820px;margin:0 auto;padding:60px 32px 40px}
+.intro-section p{font-size:.95rem;line-height:1.95;color:var(--text-1)}
+.intro-section p+p{margin-top:1em}
+.saigo-note{margin-top:32px;padding:20px 28px;background:var(--bg-2);border-left:3px solid var(--gold);font-size:.88rem;color:var(--text-1);line-height:1.85}
+.saigo-note strong{color:var(--gold)}
+.filter-bar{position:sticky;top:56px;z-index:90;background:rgba(8,11,18,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:14px 32px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.filter-label{font-family:var(--font-sans);font-size:.72rem;color:var(--text-2);letter-spacing:.08em;margin-right:4px;white-space:nowrap}
+.filter-btn{font-family:var(--font-sans);font-size:.75rem;padding:5px 14px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--text-2);cursor:pointer;transition:all .2s;white-space:nowrap}
+.filter-btn:hover{border-color:var(--gold-dim);color:var(--text-1)}
+.filter-btn.active{background:var(--gold);border-color:var(--gold);color:#080b12;font-weight:600}
+.filter-count{font-family:var(--font-sans);font-size:.72rem;color:var(--text-2);margin-left:auto;white-space:nowrap}
+.poems-section{padding:40px 32px 80px;max-width:1200px;margin:0 auto}
+.poems-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.poem-card{background:var(--bg-2);border:1px solid var(--border);border-radius:4px;padding:28px 24px 20px;transition:border-color .2s,transform .2s;display:flex;flex-direction:column}
+.poem-card:hover{border-color:var(--gold-dim);transform:translateY(-2px)}
+.card-kana{font-family:var(--font-display);font-size:2.8rem;font-weight:600;color:var(--gold);line-height:1;margin-bottom:16px;letter-spacing:-.02em}
+.card-num{font-family:var(--font-sans);font-size:.68rem;color:var(--text-2);margin-left:8px;vertical-align:middle;letter-spacing:.05em}
+.card-poem{font-family:var(--font-serif);font-size:.88rem;color:var(--text-0);line-height:1.85;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--border);flex:0 0 auto}
+.card-interp{font-family:var(--font-sans);font-size:.80rem;color:var(--text-1);line-height:1.75;flex:1;margin-bottom:18px}
+.card-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.tag{font-family:var(--font-sans);font-size:.68rem;padding:3px 10px;border-radius:12px;border:1px solid transparent;letter-spacing:.03em}
+.t1{border-color:rgba(201,168,92,.4);color:#a08040}
+.t2{border-color:rgba(100,160,220,.4);color:#6aa0d8}
+.t3{border-color:rgba(100,200,130,.4);color:#72c87a}
+.t4{border-color:rgba(220,100,80,.4);color:#d06a60}
+.t5{border-color:rgba(170,110,220,.4);color:#b07ad8}
+.t6{border-color:rgba(90,190,200,.4);color:#62c8d0}
+.site-footer{text-align:center;padding:48px 32px 40px;border-top:1px solid var(--border)}
+.source-note{max-width:600px;margin:40px auto 0;padding:20px 28px;background:var(--bg-2);border:1px solid var(--border);font-family:var(--font-sans);font-size:.78rem;color:var(--text-2);line-height:1.7;text-align:left}
+@media(max-width:1024px){.poems-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.hero{grid-template-columns:1fr;min-height:auto}.hero-img{display:none}.hero-text{padding:60px 24px 48px}.poems-grid{grid-template-columns:1fr}.site-nav{padding:0 20px}.nav-links{display:none}.poems-section{padding:32px 20px 60px}.filter-bar{padding:12px 20px}}
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a href="../index.html" class="nav-brand">内側からの<span>保守論</span></a>
+  <div class="nav-links">
+    <a href="../index.html">記事一覧</a>
+    <a href="index.html">AI西郷</a>
+    <a href="iroha.html" style="color:var(--gold)">いろは歌</a>
+  </div>
+</nav>
+<section class="hero">
+  <img src="../images/nisshinko-statue.jpg" alt="島津忠良公（日新斉）像" class="hero-img">
+  <div class="hero-text">
+    <p class="hero-eyebrow">Shimazu Tadayoshi · 1492-1568</p>
+    <h1 class="hero-title">日新公いろは歌</h1>
+    <p class="hero-subtitle">薩摩武士の教典、47首の知恵</p>
+    <p class="hero-desc">島津中興の祖・島津忠良公（日新斉）が5年余の歳月をかけて詠んだ47首。薩摩の郷中教育の精神的支柱であり、西郷隆盛が幼少より諳んじた生の哲学である。</p>
+    <div class="hero-meta"><span>全47首</span><span>6つのテーマ</span><span>今も鹿児島県南さつま市で継承</span></div>
+  </div>
+</section>
+<section class="intro-section">
+  <p>日新公いろは歌は、戦国期の薩摩藩主・島津忠良公（号：日新斉）が、いろは47文字の各音を頭文字に据えて詠んだ教訓歌の集成である。修身・処世・統治・覚悟にわたる広範な知恵が、簡潔な和歌の形式に凝縮されている。</p>
+  <p>これらの歌は「郷中教育」——薩摩藩独自の年長者が年少者を指導する自治的教育制度——の根幹を成し、明治維新を担った人材群の精神形成に深く刻み込まれた。</p>
+  <div class="saigo-note">
+    <strong>西郷隆盛との接点</strong><br>
+    西郷南洲は幼少期よりこの47首を習得し、生涯その精神を体現した。「敬天愛人」の思想的基盤の一端はここに求めることができる。AI西郷のプロンプトにおける「毋意・毋必・毋固・毋我」の四原則もまた、この歌群が体現する「私を捨てて義に従う」精神と通底している。
+  </div>
+</section>
+<div class="filter-bar">
+  <span class="filter-label">テーマ</span>
+  <button class="filter-btn active" data-tag="all" onclick="fp('all')">すべて</button>
+  <button class="filter-btn" data-tag="自己修養" onclick="fp('自己修養')">自己修養</button>
+  <button class="filter-btn" data-tag="人間関係" onclick="fp('人間関係')">人間関係</button>
+  <button class="filter-btn" data-tag="学問・実践" onclick="fp('学問・実践')">学問・実践</button>
+  <button class="filter-btn" data-tag="覚悟・武士道" onclick="fp('覚悟・武士道')">覚悟・武士道</button>
+  <button class="filter-btn" data-tag="リーダーシップ" onclick="fp('リーダーシップ')">リーダーシップ</button>
+  <button class="filter-btn" data-tag="心・精神" onclick="fp('心・精神')">心・精神</button>
+  <span class="filter-count" id="fc">47首</span>
+</div>
+<section class="poems-section">
+  <div class="poems-grid" id="pg"></div>
+  <div class="source-note"><strong>底本：</strong>島津義弘.com（http://www.shimazu-yoshihiro.com/）より。現代語解釈は原文の意を損なわない範囲で整理。今も鹿児島県南さつま市では、子供たちが学校でこの47首を学んでいる。</div>
+</section>
+<footer class="site-footer">
+  <p style="font-family:var(--font-serif);font-size:1rem;font-weight:600;color:var(--text-0)">内側からの<span style="color:var(--gold)">保守論</span></p>
+  <p style="font-family:var(--font-sans);font-size:.78rem;color:var(--text-2);margin-top:8px">
+    <a href="../index.html" style="color:var(--text-2)">記事一覧へ戻る</a> ｜ <a href="index.html" style="color:var(--text-2)">AI西郷</a> ｜ &copy; 2026 石井聡
+  </p>
+</footer>
+<script>
+const D=[
+{n:1,k:"い",p:"いにしへの道を聞きても唱へても<br>わが行に　せずばかひなし",i:"昔の賢者の教えも口に唱えるだけでは役に立たない。実践・実行することがもっとも大事である。",t:["学問・実践","自己修養"]},
+{n:2,k:"ろ",p:"楼の上もはにふの小屋も住む人の<br>心にこそは　高きいやしき",i:"立派な御殿に住もうと粗末な小屋に住もうと、人間の価値はそれで決まらない。心のあり方によってこそ真価が決まる。",t:["心・精神"]},
+{n:3,k:"は",p:"はかなくも明日の命を頼むかな<br>今日も今日と　学びをばせで",i:"明日のことは誰もわからない。学びを先送りにして、もし今日が最後だったらどうするのか。今この時を大切にすべきだ。",t:["学問・実践","覚悟・武士道"]},
+{n:4,k:"に",p:"似たるこそ友としよけれ交らば<br>我にます人　おとなしきひと",i:"人は自分と似た人と仲良くなりがちだが、それだけでは進歩は望めない。自分より優れた見識を持つ者を友とすることで自己研鑽が生まれる。",t:["人間関係","自己修養"]},
+{n:5,k:"ほ",p:"仏神他にましまさず人よりも<br>心に恥ぢよ　天地よく知る",i:"神仏は外にいるのではなく、自分の心の中にいる。恥ずべき行動をしたなら良心に恥じよ。世間は欺けても、自分の心は欺けない。",t:["心・精神","自己修養"]},
+{n:6,k:"へ",p:"下手ぞとて我とゆるすな稽古だに<br>つもらばちりも　やまとことのは",i:"自分は下手だと卑下して努力を怠ってはならない。稽古を積めば少しずつ進歩し遂には上手になれる。塵も積もれば山となる。継続は力なり。",t:["学問・実践","自己修養"]},
+{n:7,k:"と",p:"とがありて人を斬るとも軽くすな<br>活かす刀も　ただ一つなり",i:"罪があっても刑を行うにあたって軽々しく行ってはいけない。殺すも活かすも心一つで決まる。",t:["リーダーシップ","自己修養"]},
+{n:8,k:"ち",p:"知恵能は身につきぬれど荷にならず<br>人は重んじ　はづるものなり",i:"知恵や芸能は身につけても重荷にならない。多くを習って身につけるべきだ。人はその知恵ある者を尊敬し、己の及ばない事を恥じるだろう。",t:["学問・実践"]},
+{n:9,k:"り",p:"理も法も立たぬ世ぞとてひきやすき<br>心の駒の　行くにまかすな",i:"道理の通らない乱世であっても、自分一人は正道を歩み、心を奮い起こして正義と人道を守り通せよ。自暴自棄になるものではない。",t:["覚悟・武士道","自己修養"]},
+{n:10,k:"ぬ",p:"盗人はよそより入ると思うかや<br>耳目の門に　戸ざしよくせよ",i:"本当の意味での「盗人」は耳や目から入ってくる。悪しき情報・誘惑に対して、目と耳によく戸締りをせよ。",t:["自己修養","心・精神"]},
+{n:11,k:"る",p:"流通すと貴人や君が物語り<br>はじめて聞ける　顔もちぞよき",i:"たとえ自分が知っていることでも、目上の人の話は初めて聞くという顔で聞くのがよい。知っていることを顔や言葉に出してはならない。",t:["人間関係"]},
+{n:12,k:"を",p:"小車の我が悪業にひかれてや<br>つとむる道を　うしと見るらん",i:"人は己の怠け心に引っ張られ、やがては仕事が辛くなり悪癖となって落ちてゆく。それぞれ職分を守って、真面目にその業に務めるべきだ。",t:["自己修養"]},
+{n:13,k:"わ",p:"私を捨てて君にしむかはねば<br>うらみも起こり　述懐もあり",i:"君主に仕えるには全く一身をささげて我を捨てなければ、恨みも不満もでる。一身をささげて仕えよ。",t:["覚悟・武士道","リーダーシップ"]},
+{n:14,k:"か",p:"学問はあしたの潮のひるまにも<br>なみのよるこそ　なほ静かなれ",i:"学問をするには朝も昼も間断なく修めなければならない。特に夜は静かで勉強しやすい。時間を惜しんでしっかり学ぶべきだ。",t:["学問・実践"]},
+{n:15,k:"よ",p:"善きあしき人の上にて身を磨け<br>友はかがみと　なるものぞかし",i:"人は自分の行いの善し悪しを知ることは難しいが、他人の善悪は目に付く。友人を見て良いことは見習い、悪いことは自省せよ。",t:["人間関係","自己修養"]},
+{n:16,k:"た",p:"種子となる心の水にまかせずば<br>道より外に　名も流れまじ",i:"私利私欲にかられて事を行えば、道に外れた悪評が立つ。悪の種を刈り取って、正道を行くべきだ。",t:["自己修養","心・精神"]},
+{n:17,k:"れ",p:"礼するは人にするかは人をまた<br>さぐるは人を　下ぐるものかは",i:"人に礼を尽くすことは、自分を正しくして己を敬うことでもある。天を敬い己を慎む心を養え。",t:["人間関係","自己修養"]},
+{n:18,k:"そ",p:"そしるにも二つあるべし大方は<br>主人のために　なるものと知れ",i:"家臣の諫言には「主人を思うあまり」のものと「自己利害から」のものがある。主人たるものは良く判断し、反省の資とすべきだ。",t:["リーダーシップ","人間関係"]},
+{n:19,k:"つ",p:"つらしとて恨かへすな我れ人に<br>報い報いて　はてしなき世ぞ",i:"どんなに辛い仕打ちを受けても相手を恨み返してはならない。恨みが恨みを呼び連鎖が続く。恨みには徳をもって対処すべきだ。",t:["人間関係","心・精神"]},
+{n:20,k:"ね",p:"願わずば隔もあらじ偽の<br>世に誠ある　伊勢の神垣",i:"誠を持って事にあたれば相応の人生を歩める。不正で対処すれば結局は地に落ちる。人は欺けても、天は公平に人を見ている。",t:["自己修養","心・精神"]},
+{n:21,k:"な",p:"名を今に残し置ける人も人<br>こころも心　何かおとらん",i:"後世に名を残した偉人も、人であって我々と違いはない。心も同じであるから、我々とて及ばないということはない。奮起して努力せよ。",t:["覚悟・武士道","自己修養"]},
+{n:22,k:"ら",p:"楽も苦も時過ぎぬれば跡もなし<br>世に残る名を　ただ思ふべし",i:"苦も楽も永久ではなく、時が過ぎれば跡形もない。困難に耐えて世の為に尽くすべきだ。後世に名声を残す事を心がけよ。",t:["覚悟・武士道"]},
+{n:23,k:"む",p:"昔より道ならずして驕る身の<br>天のせめにし　あはざるはなし",i:"昔から道に外れて奢り高ぶった者で天罰を受けなかった者はいない。正道を歩み、おごりを遠ざけて神の教えを守っていきなさい。",t:["自己修養","覚悟・武士道"]},
+{n:24,k:"う",p:"憂かりける今の身こそはさきの世と<br>おもへば今ぞ　後の世ならん",i:"辛い現世は前世の報いの結果である。現世の行いの報いは後の世の姿となる。現世の行いを大切にせよ。すべては因果応報である。",t:["心・精神"]},
+{n:25,k:"い（亥）",p:"亥に臥して寅には起くと夕露の<br>身を徒に　あらせじがため",i:"亥（午後10時）に寝て、寅（午前4時）に起きる。朝早く起きて夜遅く休むのも、それぞれの勤めを果たすため。時間を惜しんで勤労すべきだ。",t:["学問・実践","自己修養"]},
+{n:26,k:"の",p:"遁るまじ所をかねて思ひきれ<br>時にいたりて　すずしかるべし",i:"君や国のため命をかけなければならない時がやってくる。日ごろから覚悟を決めておけば、万一の場合にも未練なく気持ちが清らかであろう。",t:["覚悟・武士道"]},
+{n:27,k:"お",p:"おもほえず違うものなり身の上の<br>欲をはなれて　義を守れ人",i:"私欲を離れて、正義を守って行動せよ。私利私欲を取り去って心の鏡を明らかにすると迷うことはない。",t:["自己修養","心・精神"]},
+{n:28,k:"く",p:"苦しくも直進を行け九曲折の<br>未は鞍馬の　さかさまの世ぞ",i:"どんなに苦しくても悪事を行ってはいけない。正道を歩みなさい。曲がった道を歩んだ者は、まっさかさまに闇の世界に落ち込む。",t:["覚悟・武士道"]},
+{n:29,k:"や",p:"やはらぐと怒るをいはば弓と筆<br>鳥に二つの　翼とを知れ",i:"穏やかさと怒りをたとえれば文と武。鳥に二つの翼があるように、どちらか欠いても役に立たない。寛厳宜しく使い分けて事に当たるべきだ。",t:["リーダーシップ","自己修養"]},
+{n:30,k:"ま",p:"万能も一心とあり事ふるに<br>身ばし頼むな　思案堪忍",i:"「万能一心」という。いかに万能であっても心が悪ければ役に立たない。自分の才能を自慢してはならない。思慮と忍耐が肝要だ。",t:["心・精神","自己修養"]},
+{n:31,k:"け",p:"賢不肖用い捨つるといふ人も<br>必ずならば　殊勝なるべし",i:"賢者を登用し愚者を遠ざけよと口に唱える人も、それを実行できるならば素晴らしい。だが実行はなかなか難しい。",t:["リーダーシップ"]},
+{n:32,k:"ふ",p:"不勢とて敵を侮ることなかれ<br>多勢を見ても　恐るべからず",i:"少数だからといって侮ってはいけない。大勢だからといって恐れるに足りない。一致団結すれば大敵を破ることができる。",t:["覚悟・武士道","リーダーシップ"]},
+{n:33,k:"こ",p:"心こそ軍する身の命なれ<br>そろふれば生き　揃はねば死す",i:"心・士気こそ戦う者の命である。気持ちが一つにまとまっていれば生き、揃っていなければ死を招く。",t:["リーダーシップ","心・精神"]},
+{n:34,k:"え",p:"廻向には我と人とを隔つなよ<br>看経はよし　してもせずとも",i:"死者を弔い極楽往生を祈るには、敵味方分け隔てなく等しく祈りなさい。読経するもよし、しなくてもよい。",t:["人間関係","心・精神"]},
+{n:35,k:"て",p:"敵となる人こそ己が師匠ぞと<br>思ひかへして　身をも嗜め",i:"自分にとって敵となる人こそわが師匠と思いなさい。冷静に観察すれば反面教師として見えてくる。すなわち手本ともなるものである。",t:["人間関係","自己修養"]},
+{n:36,k:"あ",p:"あきらけき目も呉竹のこの世より<br>迷はばいかに　後のやみじは",i:"光あふれる現世でさえ迷っていては、死後の闇の世界ではますます迷うだろう。仏道を修めて悟りを開きなさい。",t:["覚悟・武士道","心・精神"]},
+{n:37,k:"さ",p:"酒も水ながれも酒となるぞかし<br>ただ情あれ　君が言の葉",i:"同じ言葉でも水のように感じる者と酒のように感じる者がいる。要は与え方である。人の上に立つ者は思いやり深く、情け深くあれ。",t:["リーダーシップ","人間関係"]},
+{n:38,k:"き",p:"聞くことも又見ることもこころがら<br>みな迷なり　みなさとりなり",i:"我々が見たり聞いたりすることはすべて己の心の持ちよう次第で、迷いともなり悟りともなる。",t:["心・精神"]},
+{n:39,k:"ゆ",p:"弓を得て失ふことも大将の<br>こころひとつの　手をばはなれず",i:"組織の結束力をまとめるも失うも、すべて大将の心一つにある。",t:["リーダーシップ"]},
+{n:40,k:"め",p:"めぐりては我が身にこそつかへけれ<br>先祖のまつり　忠孝の道",i:"先祖を祀ることや忠孝の道に尽くすことは、やがて巡り巡って自分に返ってくる。おろそかにしてはならない。",t:["自己修養","心・精神"]},
+{n:41,k:"み",p:"道にただ身をば捨てんと思ひとれ<br>必ず天の　助けあるべし",i:"正しい道であれば一身を捨てて突き進め。そうすればかならず天の助けがあるはずだ。",t:["覚悟・武士道"]},
+{n:42,k:"し",p:"舌だにも歯のこはきをばしるものを<br>人は心の　なからましやは",i:"舌でさえ歯の硬いことを知っている。ましてや人においては、交わる相手の正邪善悪を察する心がなくてはならない。",t:["人間関係","自己修養"]},
+{n:43,k:"え（えへる）",p:"えへる世をさましてやらで盃に<br>無明の酒を　かさねるはうし",i:"迷いの世の中で、さらに杯を重ねて酔いしれ、迷いの上に迷いを重ねて歩くのは情けない。真っ直ぐに先を見据えて歩くべきだ。",t:["覚悟・武士道","心・精神"]},
+{n:44,k:"ひ",p:"ひとり身をあはれとおもへ物ごとに<br>民にはゆるす　心あるべし",i:"よるべない老人、孤児、寡婦に対しては情けをかけていたわれ。人に対しては仁慈の心で寛大に接しなさい。",t:["リーダーシップ","人間関係"]},
+{n:45,k:"も",p:"もろもろの国やところの政道は<br>人にまづよく　教へならはせ",i:"治める国や組織の掟は、まず人々に良く教えさとした上で実行せよ。教えないで法を犯したものを罰するのは不仁の仕方だ。",t:["リーダーシップ"]},
+{n:46,k:"せ",p:"善に移りあやまれるをば改めよ<br>義不義は生れ　つかぬものなり",i:"善に移り、過ちは改めよ。元来、義不義は生まれつきのものではない。心のありようで義にも不義にもなる。気づいたらすぐ改めよ。",t:["自己修養","人間関係"]},
+{n:47,k:"す",p:"少しきを足れりとも知れ満ちぬれば<br>月もほどなく　十六夜の空",i:"少し足りないぐらいを満足とすべし。満月の次の十六夜の月は欠け始める。足るを知って楽しむ心が大事だ。禅の「吾唯足知」に通じる。",t:["心・精神"]}
+];
+const TC={"自己修養":"t1","人間関係":"t2","学問・実践":"t3","覚悟・武士道":"t4","リーダーシップ":"t5","心・精神":"t6"};
+function bg(f){
+  const g=document.getElementById('pg');let c=0;g.innerHTML='';
+  D.forEach(p=>{
+    if(f!=='all'&&!p.t.includes(f))return;c++;
+    const d=document.createElement('div');d.className='poem-card';
+    d.innerHTML='<div class="card-kana">'+p.k+'<span class="card-num">第'+p.n+'首</span></div>'
+      +'<div class="card-poem">'+p.p+'</div>'
+      +'<div class="card-interp">'+p.i+'</div>'
+      +'<div class="card-tags">'+p.t.map(x=>'<span class="tag '+(TC[x]||'')+'">'+x+'</span>').join('')+'</div>';
+    g.appendChild(d);
+  });
+  document.getElementById('fc').textContent=c+'首';
+}
+function fp(t){document.querySelectorAll('.filter-btn').forEach(b=>b.classList.toggle('active',b.dataset.tag===t));bg(t);}
+bg('all');
+</script>
+</body>
+</html>
