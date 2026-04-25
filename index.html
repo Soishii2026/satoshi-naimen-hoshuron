@@ -94,14 +94,22 @@
   <section id="articles" aria-label="記事一覧">
     <div class="section-header">
       <h2 class="section-title">Articles</h2>
-      <span class="section-count" id="article-count">8 本</span>
+      <span class="section-count" id="article-count">9 本</span>
     </div>
 
     <nav class="article-toc" aria-label="記事インデックス">
       <ol class="article-toc-list">
         <li class="article-toc-item">
-          <a href="yasukuni.html">
+          <a href="mienai-gengo.html">
             <span class="toc-num">01</span>
+            <span class="toc-date">2026.04.25</span>
+            <span class="toc-title">見えない言語が同盟を変える——日本が持たなければならない言葉</span>
+            <span class="toc-tag">日米同盟</span>
+          </a>
+        </li>
+        <li class="article-toc-item">
+          <a href="yasukuni.html">
+            <span class="toc-num">02</span>
             <span class="toc-date">2026.04.24</span>
             <span class="toc-title">靖国を"私事"にした日——国家は何を手放したか</span>
             <span class="toc-tag">保守政治</span>
@@ -170,17 +178,42 @@
 
       <!-- Featured: 最新記事 -->
       <article class="article-card featured fade-in"
+               data-title="見えない言語が同盟を変える 日本が持たなければならない言葉"
+               data-tags="日米同盟 安全保障 宗教と政治 保守論"
+               onclick="location.href='mienai-gengo.html'">
+        <div class="card-thumb" id="thumb-mienai">
+          <img src="images/mienai-gengo-hero.jpg" alt="見えない言語が同盟を変える" loading="eager"
+               onerror="document.getElementById('thumb-mienai').style.display='none'">
+        </div>
+        <div class="card-meta">
+          <time class="card-date" datetime="2026-04-25">2026.04.25</time>
+          <div class="card-tags">
+            <span class="tag featured-tag">最新</span>
+            <span class="tag">日米同盟</span>
+            <span class="tag">安全保障</span>
+            <span class="tag">宗教と政治</span>
+          </div>
+        </div>
+        <h3 class="card-title">見えない言語が同盟を変える——日本が持たなければならない言葉</h3>
+        <p class="card-excerpt">「聖金曜日に撃墜され、復活祭の朝に帰還した」——ヘグセスはパイロットの救出劇をキリストの復活に重ねた。白人福音派は成人人口の23%、Project 2025提案の53%が実施済み。宗教が「言語」から「制度」へ変わったとき、日本は批判の根拠すら持てない。</p>
+        <div class="card-footer">
+          <span class="read-time">約10分</span>
+          <span class="read-more">全文を読む <span aria-hidden="true">→</span></span>
+        </div>
+      </article>
+
+
+      <article class="article-card fade-in"
                data-title="靖国を私事にした日 国家は何を手放したか"
                data-tags="保守政治 靖国 国家象徴 高市首相"
                onclick="location.href='yasukuni.html'">
         <div class="card-thumb" id="thumb-yasukuni">
-          <img src="images/yasukuni-hero.png" alt="靖国を私事にした日——国家は何を手放したか" loading="eager"
+          <img src="images/yasukuni-hero.png" alt="靖国を私事にした日——国家は何を手放したか" loading="lazy"
                onerror="document.getElementById('thumb-yasukuni').style.display='none'">
         </div>
         <div class="card-meta">
           <time class="card-date" datetime="2026-04-24">2026.04.24</time>
           <div class="card-tags">
-            <span class="tag featured-tag">最新</span>
             <span class="tag">保守政治</span>
             <span class="tag">靖国</span>
             <span class="tag">国家象徴</span>
@@ -478,7 +511,8 @@
       <div>
         <p style="font-family:var(--font-sans);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">最近の記事</p>
         <ul style="display:flex;flex-direction:column;gap:8px;">
-          <li><a href="yasukuni.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--gold)">靖国を"私事"にした日</a></li>
+          <li><a href="mienai-gengo.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--gold)">見えない言語が同盟を変える</a></li>
+          <li><a href="yasukuni.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">靖国を&quot;私事&quot;にした日</a></li>
           <li><a href="anpo-ronso.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">安全保障論争という名の信仰告白</a></li>
           <li><a href="hikigane.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">引き金を引くのは誰か</a></li>
           <li><a href="hormuz50.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">「ホルムズ危機50日」</a></li>
