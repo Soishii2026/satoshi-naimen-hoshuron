@@ -11,7 +11,7 @@
     <copyright>Copyright 2026 石井聡</copyright>
     <managingEditor>sois2004@gmail.com (石井聡)</managingEditor>
     <webMaster>sois2004@gmail.com (石井聡)</webMaster>
-    <lastBuildDate>Mon, 21 Apr 2026 22:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2026 10:00:00 +0900</lastBuildDate>
     <ttl>1440</ttl>
     <atom:link href="https://soishii2026.github.io/satoshi-naimen-hoshuron/rss.xml" rel="self" type="application/rss+xml"/>
 
@@ -122,7 +122,21 @@
       ]]></content:encoded>
     </item>
 
-  <item>
+  
+    <item>
+      <title>西郷南洲が愛した言志四録——古香評つき三十六條</title>
+      <link>https://soishii2026.github.io/satoshi-naimen-hoshuron/genshi-shiroku.html</link>
+      <guid isPermaLink="true">https://soishii2026.github.io/satoshi-naimen-hoshuron/genshi-shiroku.html</guid>
+      <pubDate>Sun, 26 Apr 2026 10:00:00 +0900</pubDate>
+      <dc:creator>石井聡</dc:creator>
+      <category>古典</category>
+      <category>佐藤一斎</category>
+      <category>言志四録</category>
+      <category>修養</category>
+      <description><![CDATA[佐藤一斎の『言志四録』から西郷隆盛が座右とした三十六条を選出。幕末の碩儒・秋月古香の偶評を添え、現代語で読み解く。「志を立てるのは、人生のはじまりである」——明治維新を動かした思想の核心を問い直す。]]></description>
+    </item>
+
+    <item>
       <title>強制外交という保守の誤謬</title>
       <link>https://soishii2026.github.io/satoshi-naimen-hoshuron/iran-kakuka.html</link>
       <guid isPermaLink="true">https://soishii2026.github.io/satoshi-naimen-hoshuron/iran-kakuka.html</guid>
