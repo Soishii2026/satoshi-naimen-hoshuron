@@ -98,7 +98,7 @@
   <section id="articles" aria-label="記事一覧">
     <div class="section-header">
       <h2 class="section-title">Articles</h2>
-      <span class="section-count" id="article-count">12 本</span>
+      <span class="section-count" id="article-count">13 本</span>
     </div>
 
     <nav class="article-toc" aria-label="記事インデックス">
@@ -206,17 +206,42 @@
 
       <!-- Featured: 最新記事 -->
       <article class="article-card featured fade-in"
-               data-title="勝ちすぎた政権の罠 保守的正統性の三層同時剥離"
-               data-tags="保守政治 高市政権 政治的正統性 保守論"
-               onclick="location.href='hoshu-seitousei.html'">
-        <div class="card-thumb" id="thumb-hoshu">
-          <img src="images/hoshu-seitousei-hero.png" alt="勝ちすぎた政権の罠" loading="eager"
-               onerror="document.getElementById('thumb-hoshu').style.display='none'">
+               data-title="守護者から創造者へ 安保3文書改訂が問う保守の本質"
+               data-tags="安保3文書 保守政治 国家戦略 安全保障改訂"
+               onclick="location.href='anpo3.html'">
+        <div class="card-thumb" id="thumb-anpo3">
+          <img src="images/anpo3-hero.png" alt="守護者から創造者へ" loading="eager"
+               onerror="document.getElementById('thumb-anpo3').style.display='none'">
         </div>
         <div class="card-meta">
           <time class="card-date" datetime="2026-04-27">2026.04.27</time>
           <div class="card-tags">
             <span class="tag featured-tag">最新</span>
+            <span class="tag">安保3文書</span>
+            <span class="tag">保守政治</span>
+            <span class="tag">国家戦略</span>
+          </div>
+        </div>
+        <h3 class="card-title">守護者から創造者へ——安保3文書改訂が問う保守の本質</h3>
+        <p class="card-excerpt">できることは進む。難しいことは止まる。必要なことは見えていない。——有識者会議が始まった今日、日本の保守政治は「秩序の守護者」から「秩序の創造者」へ移行できるか。問われているのは数字でも装備でもなく、国家意思そのものだ。</p>
+        <div class="card-footer">
+          <span class="read-time">約6分</span>
+          <span class="read-more">全文を読む <span aria-hidden="true">→</span></span>
+        </div>
+      </article>
+
+      <!-- Article: 勝ちすぎた政権の罠（旧featured） -->
+      <article class="article-card fade-in"
+               data-title="勝ちすぎた政権の罠 保守的正統性の三層同時剥離"
+               data-tags="保守政治 高市政権 政治的正統性 保守論"
+               onclick="location.href='hoshu-seitousei.html'">
+        <div class="card-thumb" id="thumb-hoshu">
+          <img src="images/hoshu-seitousei-hero.png" alt="勝ちすぎた政権の罠" loading="lazy"
+               onerror="document.getElementById('thumb-hoshu').style.display='none'">
+        </div>
+        <div class="card-meta">
+          <time class="card-date" datetime="2026-04-27">2026.04.27</time>
+          <div class="card-tags">
             <span class="tag">保守政治</span>
             <span class="tag">高市政権</span>
             <span class="tag">政治的正統性</span>
@@ -224,10 +249,7 @@
         </div>
         <h3 class="card-title">勝ちすぎた政権の罠——保守的正統性の三層同時剥離</h3>
         <p class="card-excerpt">「普通になされるべき」と言いながら自分はしない——靖国参拝を「プライベート」と呼んだ一言が、保守的正統性の自壊を示す。316議席という戦後最大の入力正統性と、予算不成立・官邸閉鎖・看板の空洞化という三層の剥離を保守の内側から問う。</p>
-        <div class="card-footer">
-          <span class="read-time">約8分</span>
-          <span class="read-more">全文を読む <span aria-hidden="true">→</span></span>
-        </div>
+        <div class="card-footer"><span class="read-time">約8分</span><span class="read-more">全文を読む <span aria-hidden="true">→</span></span></div>
       </article>
 
       <!-- Article: 強制外交という保守の誤謬（旧featured） -->
@@ -588,7 +610,8 @@
       <div>
         <p style="font-family:var(--font-sans);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">最近の記事</p>
         <ul style="display:flex;flex-direction:column;gap:8px;">
-          <li><a href="hoshu-seitousei.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--gold)">勝ちすぎた政権の罠</a></li>
+          <li><a href="anpo3.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--gold)">守護者から創造者へ</a></li>
+          <li><a href="hoshu-seitousei.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2)">勝ちすぎた政権の罠</a></li>
           <li><a href="iran-kakuka.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">強制外交という保守の誤謬</a></li>
           <li><a href="mienai-gengo.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">見えない言語が同盟を変える</a></li>
           <li><a href="yasukuni.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">靖国を&quot;私事&quot;にした日</a></li>
