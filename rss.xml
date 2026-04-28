@@ -11,7 +11,7 @@
     <copyright>Copyright 2026 石井聡</copyright>
     <managingEditor>sois2004@gmail.com (石井聡)</managingEditor>
     <webMaster>sois2004@gmail.com (石井聡)</webMaster>
-    <lastBuildDate>Mon, 28 Apr 2026 10:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 29 Apr 2026 09:00:00 +0900</lastBuildDate>
     <ttl>1440</ttl>
     <atom:link href="https://soishii2026.github.io/satoshi-naimen-hoshuron/rss.xml" rel="self" type="application/rss+xml"/>
 
@@ -20,6 +20,19 @@
       <title>内側からの保守論</title>
       <link>https://soishii2026.github.io/satoshi-naimen-hoshuron/</link>
     </image>
+
+    <item>
+    <title>三文書が書かなかったこと——政治への試験問題が始まった</title>
+    <link>https://soishii2026.github.io/satoshi-naimen-hoshuron/sanbunsho.html</link>
+    <description>政府自身が「軍事バランスの不可逆的変容」と書いた。しかし同じ資料が沈黙している問いが三つある——誰が指揮するのか、いつ戦うのか、何を目指すのか。三文書改訂の本当の試験問題は、この空白を政治が埋められるかどうかだ。</description>
+    <pubDate>Tue, 29 Apr 2026 09:00:00 +0900</pubDate>
+    <guid>https://soishii2026.github.io/satoshi-naimen-hoshuron/sanbunsho.html</guid>
+    <dc:creator>石井聡</dc:creator>
+    <category>安全保障</category>
+    <category>保守政治</category>
+    <category>安保三文書</category>
+    <category>国家戦略</category>
+  </item>
 
     <item>
     <title>安全保障は語られる、通貨は語られない——保守言論の空白とホルムズ危機</title>
