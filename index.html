@@ -98,11 +98,19 @@
   <section id="articles" aria-label="記事一覧">
     <div class="section-header">
       <h2 class="section-title">Articles</h2>
-      <span class="section-count" id="article-count">14 本</span>
+      <span class="section-count" id="article-count">15 本</span>
     </div>
 
     <nav class="article-toc" aria-label="記事インデックス">
       <ol class="article-toc-list">
+        <li class="article-toc-item">
+          <a href="josei-tenno.html">
+            <span class="toc-num">00</span>
+            <span class="toc-date">2026.04.28</span>
+            <span class="toc-title">「女性天皇」と「女系天皇」は違う——八割の数字が隠す、問いの罠</span>
+            <span class="toc-tag">皇位継承</span>
+          </a>
+        </li>
         <li class="article-toc-item">
           <a href="tsuka.html">
             <span class="toc-num">00</span>
@@ -214,17 +222,42 @@
 
       <!-- Featured: 最新記事 -->
       <article class="article-card featured fade-in"
+               data-title="「女性天皇」と「女系天皇」は違う 八割の数字が隠す問いの罠"
+               data-tags="皇位継承 保守政治 皇室典範 保守論"
+               onclick="location.href='josei-tenno.html'">
+        <div class="card-thumb" id="thumb-josei">
+          <img src="images/josei-tenno-hero.png" alt="問いを立て直せ" loading="eager"
+               onerror="document.getElementById('thumb-josei').style.display='none'">
+        </div>
+        <div class="card-meta">
+          <time class="card-date" datetime="2026-04-28">2026.04.28</time>
+          <div class="card-tags">
+            <span class="tag featured-tag">最新</span>
+            <span class="tag">皇位継承</span>
+            <span class="tag">保守政治</span>
+            <span class="tag">皇室典範</span>
+          </div>
+        </div>
+        <h3 class="card-title">「女性天皇」と「女系天皇」は違う——八割の数字が隠す、問いの罠</h3>
+        <p class="card-excerpt">「女性天皇への賛成は八割を超える」——だがその八割は、何に賛成しているのか。女性天皇と女系天皇は似て非なる制度概念だ。区別を示さない問いは誘導であり、その誘導に沈黙で応じることは保守の自殺行為だ。語り抜くことが保守の義務だ。</p>
+        <div class="card-footer">
+          <span class="read-time">約6分</span>
+          <span class="read-more">全文を読む <span aria-hidden="true">→</span></span>
+        </div>
+      </article>
+
+      <!-- Article: 守護者から創造者へ -->
+      <article class="article-card fade-in"
                data-title="守護者から創造者へ 安保3文書改訂が問う保守の本質"
                data-tags="安保3文書 保守政治 国家戦略 安全保障改訂"
                onclick="location.href='anpo3.html'">
         <div class="card-thumb" id="thumb-anpo3">
-          <img src="images/anpo3-hero.png" alt="守護者から創造者へ" loading="eager"
+          <img src="images/anpo3-hero.png" alt="守護者から創造者へ" loading="lazy"
                onerror="document.getElementById('thumb-anpo3').style.display='none'">
         </div>
         <div class="card-meta">
           <time class="card-date" datetime="2026-04-27">2026.04.27</time>
           <div class="card-tags">
-            <span class="tag featured-tag">最新</span>
             <span class="tag">安保3文書</span>
             <span class="tag">保守政治</span>
             <span class="tag">国家戦略</span>
@@ -618,9 +651,9 @@
       <div>
         <p style="font-family:var(--font-sans);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">最近の記事</p>
         <ul style="display:flex;flex-direction:column;gap:8px;">
-          <li><a href="tsuka.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--gold)">安全保障は語られる、通貨は語られない</a></li>
-          <li><a href="anpo3.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2)">守護者から創造者へ</a></li>
-          <li><a href="hoshu-seitousei.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2)">勝ちすぎた政権の罠</a></li>
+          <li><a href="josei-tenno.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--gold)">「女性天皇」と「女系天皇」は違う</a></li>
+          <li><a href="tsuka.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">安全保障は語られる、通貨は語られない</a></li>
+          <li><a href="hoshu-seitousei.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">勝ちすぎた政権の罠</a></li>
           <li><a href="iran-kakuka.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">強制外交という保守の誤謬</a></li>
           <li><a href="mienai-gengo.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">見えない言語が同盟を変える</a></li>
           <li><a href="yasukuni.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">靖国を&quot;私事&quot;にした日</a></li>
