@@ -11,7 +11,7 @@
     <copyright>Copyright 2026 石井聡</copyright>
     <managingEditor>sois2004@gmail.com (石井聡)</managingEditor>
     <webMaster>sois2004@gmail.com (石井聡)</webMaster>
-    <lastBuildDate>Wed, 30 Apr 2026 09:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 01 May 2026 09:00:00 +0900</lastBuildDate>
     <ttl>1440</ttl>
     <atom:link href="https://soishii2026.github.io/satoshi-naimen-hoshuron/rss.xml" rel="self" type="application/rss+xml"/>
 
@@ -20,6 +20,18 @@
       <title>内側からの保守論</title>
       <link>https://soishii2026.github.io/satoshi-naimen-hoshuron/</link>
     </image>
+
+    <item>
+    <title>米中首脳会談は「交渉」ではない——相互人質の時代、日本の選択</title>
+    <link>https://soishii2026.github.io/satoshi-naimen-hoshuron/mutual-hostage.html</link>
+    <description>5月北京会談の本質は「交渉」でなく「共倒れを避けるための休戦管理」だ。中国がレアアース精製の9割超を、米国がドル決済網を握る「相互人質」の均衡——日本はその外に置かれる三重の脆弱性を直視していない。</description>
+    <pubDate>Thu, 01 May 2026 09:00:00 +0900</pubDate>
+    <guid>https://soishii2026.github.io/satoshi-naimen-hoshuron/mutual-hostage.html</guid>
+    <dc:creator>石井聡</dc:creator>
+    <category>米中関係</category>
+    <category>経済安保</category>
+    <category>ホルムズ危機</category>
+  </item>
 
     <item>
     <title>特別罪のない空白——国家は自らの中枢を守れるか</title>
