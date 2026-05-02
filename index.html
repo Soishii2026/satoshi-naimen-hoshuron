@@ -96,24 +96,49 @@
   <section id="articles" aria-label="記事一覧">
     <div class="section-header">
       <h2 class="section-title">Articles</h2>
-      <span class="section-count" id="article-count">19 本</span>
+      <span class="section-count" id="article-count">20 本</span>
     </div>
 
         <div class="articles-list" id="articles-list">
 
       <!-- Featured: 最新記事 -->
       <article class="article-card featured fade-in"
+               data-title="科学を黙らせた国の代償 物理学会六千四百三十二人と対話なき政策の限界"
+               data-tags="学術 安全保障 国家戦略 保守論"
+               onclick="location.href='silence.html'">
+        <div class="card-thumb" id="thumb-silence">
+          <img src="images/silence-hero.jpg" alt="科学を黙らせた国の代償——薄暗い研究室から国会議事堂を見る科学者" loading="eager"
+               onerror="document.getElementById('thumb-silence').style.display='none'">
+        </div>
+        <div class="card-meta">
+          <time class="card-date" datetime="2026-05-02">2026.05.02</time>
+          <div class="card-tags">
+            <span class="tag featured-tag">最新</span>
+            <span class="tag">学術</span>
+            <span class="tag">安全保障</span>
+            <span class="tag">保守論</span>
+          </div>
+        </div>
+        <h3 class="card-title">科学を黙らせた国の代償——物理学会六千四百三十二人と、対話なき政策の限界</h3>
+        <p class="card-excerpt">英ガーディアン紙はトランプの「科学への戦争」が科学者を政治化させたと書いた。日本は学術会議任命拒否で逆向きの罠を踏んでいる。物理学会2017年6,432人アンケートが示す科学者コミュニティの内実と、国家情報局創設論議に通底する論理。保守政権に求められる対話の場を論じる。</p>
+        <div class="card-footer">
+          <span class="read-time">約8分</span>
+          <span class="read-more">全文を読む <span aria-hidden="true">→</span></span>
+        </div>
+      </article>
+
+      <!-- Article: 米中首脳会談（旧featured） -->
+      <article class="article-card fade-in"
                data-title="米中首脳会談は交渉ではない 相互人質の時代、日本の選択"
                data-tags="経済安保 米中関係 レアアース 外交"
                onclick="location.href='mutual-hostage.html'">
         <div class="card-thumb" id="thumb-mutual-hostage">
-          <img src="images/mutual-hostage-hero.png" alt="米中首脳会談——相互人質の時代" loading="eager"
+          <img src="images/mutual-hostage-hero.png" alt="米中首脳会談——相互人質の時代" loading="lazy"
                onerror="document.getElementById('thumb-mutual-hostage').style.display='none'">
         </div>
         <div class="card-meta">
           <time class="card-date" datetime="2026-05-01">2026.05.01</time>
           <div class="card-tags">
-            <span class="tag featured-tag">最新</span>
             <span class="tag">経済安保</span>
             <span class="tag">米中関係</span>
             <span class="tag">外交</span>
@@ -130,6 +155,14 @@
 
     <nav class="article-toc" aria-label="記事インデックス">
       <ol class="article-toc-list">
+        <li class="article-toc-item">
+          <a href="silence.html">
+            <span class="toc-num">00</span>
+            <span class="toc-date">2026.05.02</span>
+            <span class="toc-title">科学を黙らせた国の代償——物理学会六千四百三十二人と、対話なき政策の限界</span>
+            <span class="toc-tag">学術安保</span>
+          </a>
+        </li>
         <li class="article-toc-item">
           <a href="mutual-hostage.html">
             <span class="toc-num">00</span>

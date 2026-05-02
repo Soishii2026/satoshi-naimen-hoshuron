@@ -11,7 +11,7 @@
     <copyright>Copyright 2026 石井聡</copyright>
     <managingEditor>sois2004@gmail.com (石井聡)</managingEditor>
     <webMaster>sois2004@gmail.com (石井聡)</webMaster>
-    <lastBuildDate>Thu, 01 May 2026 10:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 02 May 2026 10:00:00 +0900</lastBuildDate>
     <ttl>1440</ttl>
     <atom:link href="https://soishii2026.github.io/satoshi-naimen-hoshuron/rss.xml" rel="self" type="application/rss+xml"/>
 
@@ -20,6 +20,19 @@
       <title>内側からの保守論</title>
       <link>https://soishii2026.github.io/satoshi-naimen-hoshuron/</link>
     </image>
+
+    <item>
+    <title>科学を黙らせた国の代償——物理学会六千四百三十二人と、対話なき政策の限界</title>
+    <link>https://soishii2026.github.io/satoshi-naimen-hoshuron/silence.html</link>
+    <description>英ガーディアン紙はトランプの「科学への戦争」が科学者を政治化させたと書いた。日本は学術会議任命拒否で逆向きの罠を踏んでいる。物理学会2017年6,432人アンケートが示す科学者コミュニティの内実と、国家情報局創設論議に通底する論理。保守政権に求められる対話の場を論じる。</description>
+    <pubDate>Sat, 02 May 2026 10:00:00 +0900</pubDate>
+    <guid>https://soishii2026.github.io/satoshi-naimen-hoshuron/silence.html</guid>
+    <dc:creator>石井聡</dc:creator>
+    <category>学術</category>
+    <category>安全保障</category>
+    <category>国家戦略</category>
+    <category>保守論</category>
+    </item>
 
     <item>
     <title>エドマンド・バーク 名言二十選——令和保守の基礎語録</title>
