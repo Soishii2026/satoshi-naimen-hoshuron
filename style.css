@@ -1455,3 +1455,23 @@ ul { list-style: none; }
   .toc-title { grid-column: 2; font-size: 0.84rem; }
   .toc-tag { grid-column: 2; width: fit-content; }
 }
+
+/* ─── Sidebar TOC: 番号＋タイトルのみのコンパクト表示 ─── */
+.sidebar .article-toc-item a {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 7px 4px;
+}
+.sidebar .toc-date,
+.sidebar .toc-tag { display: none; }
+.sidebar .toc-num {
+  font-size: 0.6rem;
+  color: var(--gold-dim);
+  flex-shrink: 0;
+  min-width: 20px;
+}
+.sidebar .toc-title {
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
