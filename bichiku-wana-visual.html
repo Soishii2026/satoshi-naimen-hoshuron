@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>備蓄が稼いだ時間に、日本は何をするのか</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500&family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:    #0c1220;
+    --surface: #151e2e;
+    --card:    #1c2840;
+    --border:  #253350;
+    --cream:   #e4d9c4;
+    --muted:   #8a9ab8;
+    --amber:   #e8a020;
+    --red:     #c0392b;
+    --blue:    #2980b9;
+    --green:   #27ae60;
+  }
+
+  body {
+    background-color: var(--navy);
+    color: var(--cream);
+    font-family: 'Noto Sans JP', 'Jost', sans-serif;
+    line-height: 1.8;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── 背景テクスチャ ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 15% 20%, rgba(41,128,185,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 80% at 85% 75%, rgba(192,57,43,0.07) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 40% at 50% 50%, rgba(232,160,32,0.04) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 28px 80px;
+  }
+
+  /* ── ヘッダー ── */
+  header {
+    margin-bottom: 64px;
+    border-left: 3px solid var(--amber);
+    padding-left: 20px;
+  }
+  header .label {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    color: var(--amber);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  header h1 {
+    font-family: 'Noto Serif JP', 'Cormorant Garamond', serif;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--cream);
+    margin-bottom: 8px;
+  }
+  header .sub {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-top: 10px;
+  }
+
+  /* ── セクションタイトル ── */
+  .section-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--amber);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* ── カード共通 ── */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 28px 28px 24px;
+    margin-bottom: 16px;
+  }
+
+  /* ── PANEL 1: カスケード崩壊フロー ── */
+  .cascade {
+    margin-bottom: 56px;
+  }
+
+  .flow-chain {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+  }
+
+  .flow-node {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    align-items: start;
+    gap: 0 16px;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .flow-node.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .flow-connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4px;
+  }
+  .flow-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .flow-line {
+    width: 2px;
+    flex: 1;
+    min-height: 24px;
+    background: var(--border);
+  }
+
+  .flow-content {
+    padding-bottom: 24px;
+  }
+  .flow-content h3 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .flow-content p {
+    font-size: 0.82rem;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+  .flow-content .tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-family: 'Jost', sans-serif;
+    letter-spacing: 0.08em;
+    padding: 2px 8px;
+    border-radius: 2px;
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+
+  /* ノード色 */
+  .node-trigger .flow-dot  { background: var(--blue); }
+  .node-trigger .tag       { background: rgba(41,128,185,0.15); color: var(--blue); }
+  .node-trigger h3         { color: #7ab8d8; }
+
+  .node-supply .flow-dot   { background: var(--amber); }
+  .node-supply .tag        { background: rgba(232,160,32,0.15); color: var(--amber); }
+  .node-supply h3          { color: var(--amber); }
+
+  .node-chemical .flow-dot { background: #e67e22; }
+  .node-chemical .tag      { background: rgba(230,126,34,0.15); color: #e67e22; }
+  .node-chemical h3        { color: #e8a060; }
+
+  .node-wave .flow-dot     { background: #e74c3c; }
+  .node-wave .tag          { background: rgba(231,76,60,0.15); color: #e74c3c; }
+  .node-wave h3            { color: #e87070; }
+
+  .node-food .flow-dot     { background: var(--red); }
+  .node-food .tag          { background: rgba(192,57,43,0.2); color: #e07070; }
+  .node-food h3            { color: #e06060; }
+
+  /* ── PANEL 2: 第二の罠 ── */
+  .trap-section {
+    margin-bottom: 56px;
+  }
+
+  .trap-diagram {
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr;
+    gap: 0;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  .trap-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 22px 18px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .trap-box.visible { opacity: 1; }
+
+  .trap-box.left  { transform: translateX(-20px); }
+  .trap-box.right { transform: translateX(20px);  }
+  .trap-box.left.visible, .trap-box.right.visible { transform: translateX(0); }
+
+  .trap-box .icon {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+  }
+  .trap-box h4 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+  .trap-box p {
+    font-size: 0.74rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .trap-box.danger-china {
+    border-color: rgba(192,57,43,0.5);
+    background: rgba(192,57,43,0.06);
+  }
+  .trap-box.danger-china h4 { color: #e07070; }
+
+  .trap-box.origin {
+    border-color: rgba(41,128,185,0.4);
+    background: rgba(41,128,185,0.06);
+  }
+  .trap-box.origin h4 { color: #7ab8d8; }
+
+  .trap-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    opacity: 0;
+    transition: opacity 0.8s ease 0.3s;
+  }
+  .trap-arrow.visible { opacity: 1; }
+
+  .trap-arrow .arr-label {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.62rem;
+    color: var(--amber);
+    text-align: center;
+    line-height: 1.4;
+    letter-spacing: 0.04em;
+  }
+  .trap-arrow svg {
+    width: 28px;
+    height: 20px;
+    fill: none;
+    stroke: var(--amber);
+    stroke-width: 1.5;
+  }
+
+  .trap-warning {
+    background: rgba(232,160,32,0.08);
+    border: 1px solid rgba(232,160,32,0.3);
+    border-radius: 4px;
+    padding: 16px 20px;
+    font-size: 0.82rem;
+    line-height: 1.7;
+    color: var(--cream);
+  }
+  .trap-warning strong { color: var(--amber); }
+
+  /* ── PANEL 3: タイムライン ── */
+  .timeline-section {
+    margin-bottom: 56px;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 0;
+  }
+
+  .timeline-track {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    padding: 0 0 0 20px;
+    margin-bottom: 24px;
+  }
+  .timeline-track::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 18px;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--amber) 0%, var(--red) 100%);
+  }
+
+  .tl-item {
+    display: grid;
+    grid-template-columns: 14px 1fr;
+    gap: 0 16px;
+    padding-bottom: 28px;
+    opacity: 0;
+    transform: translateX(12px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    width: 100%;
+    position: relative;
+  }
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid;
+  }
+  .tl-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .tl-item.wave1::before { border-color: var(--amber); background: var(--navy); }
+  .tl-item.wave2::before { border-color: #e67e22; background: var(--navy); }
+  .tl-item.wave3::before { border-color: var(--red); background: var(--navy); }
+
+  .tl-body {}
+  .tl-period {
+    font-family: 'Jost', 'Noto Sans JP', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+  }
+  .tl-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+  .tl-item.wave1 .tl-title { color: var(--amber); }
+  .tl-item.wave2 .tl-title { color: #e67e22; }
+  .tl-item.wave3 .tl-title { color: #e07070; }
+
+  .tl-detail {
+    font-size: 0.8rem;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+  .tl-detail strong { color: var(--cream); }
+
+  /* ── PANEL 4: 提言 ── */
+  .proposal-section {
+    margin-bottom: 56px;
+  }
+
+  .proposal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 580px) {
+    .proposal-grid { grid-template-columns: 1fr; }
+    .trap-diagram { grid-template-columns: 1fr; }
+    .trap-arrow { display: none; }
+  }
+
+  .proposal-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 22px 20px;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .proposal-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .proposal-card:hover {
+    border-color: var(--amber);
+    transition: border-color 0.2s ease;
+  }
+
+  .p-horizon {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.66rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .p-horizon.short { color: var(--amber); }
+  .p-horizon.mid   { color: var(--red);   }
+
+  .proposal-card h4 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: var(--cream);
+  }
+  .proposal-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  .proposal-card ul li {
+    font-size: 0.78rem;
+    color: var(--muted);
+    padding-left: 14px;
+    position: relative;
+    margin-bottom: 6px;
+    line-height: 1.6;
+  }
+  .proposal-card ul li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: var(--amber);
+  }
+
+  .closing-card {
+    background: rgba(232,160,32,0.06);
+    border: 1px solid rgba(232,160,32,0.25);
+    border-radius: 4px;
+    padding: 22px 24px;
+    font-size: 0.88rem;
+    line-height: 1.8;
+    color: var(--cream);
+    font-family: 'Noto Serif JP', serif;
+  }
+  .closing-card .tension {
+    color: var(--amber);
+    font-weight: 700;
+  }
+
+  /* ── KEY NUMBERS BAR ── */
+  .numbers-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 56px;
+  }
+  @media (max-width: 580px) {
+    .numbers-bar { grid-template-columns: 1fr 1fr; }
+  }
+
+  .num-cell {
+    background: var(--card);
+    padding: 18px 16px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  .num-cell.visible { opacity: 1; }
+
+  .num-value {
+    font-family: 'Cormorant Garamond', 'Noto Serif JP', serif;
+    font-size: 1.9rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--amber);
+    margin-bottom: 6px;
+  }
+  .num-unit {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.65rem;
+    color: var(--muted);
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+  }
+
+  /* ── フッター ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+    font-size: 0.72rem;
+    color: var(--muted);
+    line-height: 1.7;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+  footer strong { color: var(--cream); }
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- ヘッダー -->
+  <header>
+    <div class="label">Energy Security Analysis · 2026.05.10</div>
+    <h1>備蓄が稼いだ時間に、日本は何をするのか</h1>
+    <p class="sub">脱石油の先に待つ「第二の罠」｜NHK日曜討論「エネルギーと日本経済」図解</p>
+  </header>
+
+  <!-- KEY NUMBERS -->
+  <div class="numbers-bar">
+    <div class="num-cell">
+      <div class="num-value">4×</div>
+      <div class="num-unit">供給損失規模<br>第1次石油危機比</div>
+    </div>
+    <div class="num-cell">
+      <div class="num-value">20%</div>
+      <div class="num-unit">世界の石油・LNG<br>同時停止割合</div>
+    </div>
+    <div class="num-cell">
+      <div class="num-value">5万円</div>
+      <div class="num-unit">家計年間<br>追加負担（上限）</div>
+    </div>
+    <div class="num-cell">
+      <div class="num-value">38%</div>
+      <div class="num-unit">日本の<br>食料自給率</div>
+    </div>
+  </div>
+
+  <!-- PANEL 1: カスケード崩壊フロー -->
+  <section class="cascade">
+    <div class="section-title">Panel 01　ナフサ・カスケード崩壊の連鎖</div>
+    <div class="card">
+      <div class="flow-chain">
+
+        <div class="flow-node node-trigger">
+          <div class="flow-connector">
+            <div class="flow-dot"></div>
+            <div class="flow-line"></div>
+          </div>
+          <div class="flow-content">
+            <div class="tag">起点</div>
+            <h3>ホルムズ海峡封鎖（2か月超）</h3>
+            <p>石油・LNG同時停止は史上初。供給損失2000万バレル／日。第1次石油危機（約500万バレル）の4倍。備蓄放出で「問題ない」が続く現在。</p>
+          </div>
+        </div>
+
+        <div class="flow-node node-supply">
+          <div class="flow-connector">
+            <div class="flow-dot"></div>
+            <div class="flow-line"></div>
+          </div>
+          <div class="flow-content">
+            <div class="tag">川上</div>
+            <h3>ナフサ調達・精製の詰まり</h3>
+            <p>日本の精製設備は中東産仕様。代替原油は品質が異なり設備改修が必要。「6割確保」は紅海経由のサウジ産が主軸で、紛争拡大で一気に消える。</p>
+          </div>
+        </div>
+
+        <div class="flow-node node-chemical">
+          <div class="flow-connector">
+            <div class="flow-dot"></div>
+            <div class="flow-line"></div>
+          </div>
+          <div class="flow-content">
+            <div class="tag">川中　2026年3月〜</div>
+            <h3>化学工業が生産を絞り始めた</h3>
+            <p>エチレン・プロピレン等の生産調整を3月開始。在庫温存中。エチレン生産施設の稼働率低下が続く。川下供給不足は「これから」本格化する段階。</p>
+          </div>
+        </div>
+
+        <div class="flow-node node-wave">
+          <div class="flow-connector">
+            <div class="flow-dot"></div>
+            <div class="flow-line"></div>
+          </div>
+          <div class="flow-content">
+            <div class="tag">川下　秋以降〜半年</div>
+            <h3>二段階の値上げ波が家計を直撃</h3>
+            <p><strong>第一波（秋〜）</strong>：ガソリン・電気・ガスの直接高騰。<br><strong>第二波（夏秋〜半年）</strong>：包装材・食品・物流・医療用機器。ゴミ袋・ラップ・注射器はすでに不足開始。年間家計負担 <strong>4.7万〜5.3万円増</strong>。</p>
+          </div>
+        </div>
+
+        <div class="flow-node node-food">
+          <div class="flow-connector">
+            <div class="flow-dot"></div>
+            <div class="flow-line" style="background:transparent;"></div>
+          </div>
+          <div class="flow-content">
+            <div class="tag">農業　2026年後半〜2027年</div>
+            <h3>遅行する農業・食料危機</h3>
+            <p>ホルムズ経由の尿素肥料は世界供給の<strong>50%近く</strong>。食料価格は石油化学より半年遅れで世界規模に上昇。食料自給率38%の日本は輸入も国産農業も打撃を受ける。</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PANEL 2: 第二の罠 -->
+  <section class="trap-section">
+    <div class="section-title">Panel 02　脱石油の先に待つ「第二の罠」</div>
+
+    <div class="card" style="margin-bottom:12px;">
+      <div class="trap-diagram">
+        <div class="trap-box origin">
+          <div class="icon">🛢️</div>
+          <h4>現在の依存<br>中東・ホルムズ</h4>
+          <p>原油・LNG供給の主軸。日本は中東依存型設備で最適化。ホルムズ封鎖でそのリスクが露わになった。</p>
+        </div>
+        <div class="trap-arrow">
+          <span class="arr-label">脱石油<br>転換</span>
+          <svg viewBox="0 0 28 20"><path d="M2 10 L22 10 M16 4 L22 10 L16 16"/></svg>
+          <span class="arr-label">再エネ<br>シフト</span>
+        </div>
+        <div class="trap-box danger-china">
+          <div class="icon">⚠️</div>
+          <h4>次の依存<br>中国サプライチェーン</h4>
+          <p>太陽光パネル・EV・バッテリー・レアアースで中国が圧倒的シェアを保有。脱中東が脱中国を意味しない。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="trap-warning">
+      <strong>「脱石油は脱中東かもしれない。だが、脱中東は脱中国を意味しない。」</strong><br>
+      ホルムズ危機が促す再エネ転換は、中東依存を中国依存に付け替えるリスクを内包する。
+      再エネ補助金の増額より先に、太陽光・バッテリー・レアアースの調達先分散を設計しなければ、
+      補助金は中国産業への補助金に転化する。
+    </div>
+  </section>
+
+  <!-- PANEL 3: タイムライン -->
+  <section class="timeline-section">
+    <div class="section-title">Panel 03　影響の時間軸</div>
+    <div class="card">
+      <div class="timeline">
+        <div class="timeline-track">
+
+          <div class="tl-item wave1">
+            <div class="tl-body">
+              <div class="tl-period">2026年 夏〜秋</div>
+              <div class="tl-title">第一波：直接エネルギー高</div>
+              <div class="tl-detail">ガソリン代・電気代・ガス代が家計を直撃。備蓄が稼いだ「平常」が剥げ落ちる局面。政府の節電呼びかけ判断が問われる。</div>
+            </div>
+          </div>
+
+          <div class="tl-item wave2">
+            <div class="tl-body">
+              <div class="tl-period">2026年 秋〜冬（半年かけて）</div>
+              <div class="tl-title">第二波：化学・食品・物流の全面波及</div>
+              <div class="tl-detail">包装材・プラスチック製品・衣料・医療材料が在庫切れへ。価格上昇が川下に伝播。<strong>年間家計負担 4.7万〜5.3万円増</strong>で実質賃金が再下落。</div>
+            </div>
+          </div>
+
+          <div class="tl-item wave3">
+            <div class="tl-body">
+              <div class="tl-period">2026年後半〜2027年</div>
+              <div class="tl-title">第三波：農業・食料価格の世界的上昇</div>
+              <div class="tl-detail">ホルムズ経由の尿素肥料（世界供給の約50%）価格高騰が農業へ波及。ブラジル大豆・トウモロコシ経由で日本の食料品価格も上昇。食料自給率38%の日本は逃げ場がない。</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PANEL 4: 提言 -->
+  <section class="proposal-section">
+    <div class="section-title">Panel 04　備蓄が稼いだ時間に何をすべきか</div>
+
+    <div class="proposal-grid">
+      <div class="proposal-card">
+        <div class="p-horizon short">Short Term — 今すぐ</div>
+        <h4>備蓄を「言い訳」にするな</h4>
+        <ul>
+          <li>備蓄残量を正直に国民へ開示</li>
+          <li>緩やかな節電・節約の呼びかけを今すぐ開始</li>
+          <li>ガソリン補助金を2028年目標で省エネ住宅・EV・公共交通への構造投資へ段階シフト</li>
+        </ul>
+      </div>
+      <div class="proposal-card">
+        <div class="p-horizon mid">Mid Term — 安全保障として</div>
+        <h4>脱中国依存を国策として宣言</h4>
+        <ul>
+          <li>太陽光・バッテリー・レアアースの複数地域調達体制を設計</li>
+          <li>日米・日ASEAN・日豪の枠組みで再エネサプライチェーンを分散</li>
+          <li>再エネ補助金より先に「調達分散の設計図」を先行させよ</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="closing-card">
+      <span class="tension">脱石油か、対中依存か。</span>どちらを選ぶかは技術論ではなく、日本社会がどこまでリスクを内面化できるかの問題だ。
+      備蓄はあと何日分か。その数字を政府は正直に言え。
+    </div>
+  </section>
+
+  <footer>
+    <strong>出典</strong>：NHK日曜討論「どうなる？エネルギーと日本経済、石油確保は？物価高は？」2026年5月｜
+    発言：木内氏（野村総合研究所）・今村氏（丸紅経済研究所）・小山氏・久我氏（ニッセイ基礎研究所）｜
+    IMF世界経済見通し（2026年4月）｜石油化学工業協会 稼働率データ
+  </footer>
+
+</div>
+
+<script>
+  // スクロール IntersectionObserver によるアニメーション
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  // 監視対象を登録
+  const targets = document.querySelectorAll(
+    '.flow-node, .num-cell, .trap-box, .trap-arrow, .tl-item, .proposal-card'
+  );
+
+  targets.forEach((el, i) => {
+    // 連続して出る要素はディレイを付けて自然に見せる
+    el.style.transitionDelay = `${(i % 5) * 0.07}s`;
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
