@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" width="1600" height="600">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#060912;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#0b0e17;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0d1520;stop-opacity:1"/>
+    </linearGradient>
+    <!-- Gold glow -->
+    <radialGradient id="glow" cx="30%" cy="60%" r="50%">
+      <stop offset="0%" style="stop-color:#c9a85c;stop-opacity:0.08"/>
+      <stop offset="100%" style="stop-color:#c9a85c;stop-opacity:0"/>
+    </radialGradient>
+    <!-- Amber glow right -->
+    <radialGradient id="glowR" cx="80%" cy="40%" r="40%">
+      <stop offset="0%" style="stop-color:#e3611a;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:#e3611a;stop-opacity:0"/>
+    </radialGradient>
+    <!-- Clip for sea region -->
+    <clipPath id="seaClip">
+      <rect x="0" y="320" width="1600" height="280"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="600" fill="url(#bg)"/>
+  <rect width="1600" height="600" fill="url(#glow)"/>
+  <rect width="1600" height="600" fill="url(#glowR)"/>
+
+  <!-- Grid lines (subtle) -->
+  <g stroke="#c9a85c" stroke-width="0.3" opacity="0.06">
+    <line x1="0" y1="100" x2="1600" y2="100"/>
+    <line x1="0" y1="200" x2="1600" y2="200"/>
+    <line x1="0" y1="300" x2="1600" y2="300"/>
+    <line x1="0" y1="400" x2="1600" y2="400"/>
+    <line x1="0" y1="500" x2="1600" y2="500"/>
+    <line x1="200" y1="0" x2="200" y2="600"/>
+    <line x1="400" y1="0" x2="400" y2="600"/>
+    <line x1="600" y1="0" x2="600" y2="600"/>
+    <line x1="800" y1="0" x2="800" y2="600"/>
+    <line x1="1000" y1="0" x2="1000" y2="600"/>
+    <line x1="1200" y1="0" x2="1200" y2="600"/>
+    <line x1="1400" y1="0" x2="1400" y2="600"/>
+  </g>
+
+  <!-- Sea — dark oil-slick water -->
+  <rect x="0" y="350" width="1600" height="250" fill="#050810" opacity="0.9"/>
+  <rect x="0" y="350" width="1600" height="3" fill="#0d1e35" opacity="0.6"/>
+
+  <!-- Water shimmer lines -->
+  <g stroke="#1a3a5c" stroke-width="1" opacity="0.25">
+    <line x1="0" y1="370" x2="700" y2="370"/>
+    <line x1="900" y1="370" x2="1600" y2="370"/>
+    <line x1="0" y1="395" x2="500" y2="395"/>
+    <line x1="600" y1="395" x2="1100" y2="395"/>
+    <line x1="1200" y1="395" x2="1600" y2="395"/>
+    <line x1="0" y1="420" x2="800" y2="420"/>
+    <line x1="950" y1="420" x2="1600" y2="420"/>
+    <line x1="100" y1="445" x2="600" y2="445"/>
+    <line x1="700" y1="445" x2="1500" y2="445"/>
+    <line x1="0" y1="470" x2="400" y2="470"/>
+    <line x1="550" y1="470" x2="1300" y2="470"/>
+    <line x1="1450" y1="470" x2="1600" y2="470"/>
+  </g>
+
+  <!-- Distant fire glow (right side) -->
+  <ellipse cx="1350" cy="345" rx="180" ry="40" fill="#d4500a" opacity="0.15"/>
+  <ellipse cx="1350" cy="340" rx="100" ry="25" fill="#e8600a" opacity="0.2"/>
+  <ellipse cx="1350" cy="335" rx="50" ry="15" fill="#f07820" opacity="0.35"/>
+  <!-- Fire flames -->
+  <path d="M1310 335 Q1320 310 1330 330 Q1340 300 1350 325 Q1360 295 1370 320 Q1380 310 1390 335 Q1370 340 1350 338 Q1330 340 1310 335Z" fill="#e07010" opacity="0.6"/>
+  <path d="M1325 332 Q1335 315 1345 328 Q1355 308 1365 325 Q1375 318 1380 332 Q1365 337 1350 336 Q1335 337 1325 332Z" fill="#f09030" opacity="0.7"/>
+  <path d="M1338 330 Q1344 320 1350 327 Q1356 315 1362 328 Q1356 334 1350 333 Q1344 334 1338 330Z" fill="#fdb040" opacity="0.8"/>
+
+  <!-- Tanker silhouette (center, distant) -->
+  <g opacity="0.55">
+    <!-- Hull -->
+    <rect x="620" y="338" width="360" height="16" rx="2" fill="#0d1e30"/>
+    <!-- Superstructure -->
+    <rect x="850" y="318" width="80" height="22" rx="1" fill="#0d1e30"/>
+    <rect x="870" y="308" width="40" height="12" rx="1" fill="#0d1e30"/>
+    <!-- Bow shape -->
+    <polygon points="620,338 590,354 620,354" fill="#0d1e30"/>
+    <!-- Stern shape -->
+    <polygon points="980,338 1010,350 980,354" fill="#0d1e30"/>
+    <!-- Waterline reflection -->
+    <rect x="620" y="354" width="360" height="4" fill="#0d1e30" opacity="0.3"/>
+    <!-- Mast -->
+    <line x1="880" y1="308" x2="880" y2="280" stroke="#0d2030" stroke-width="2"/>
+  </g>
+
+  <!-- Document — foreground left -->
+  <g transform="rotate(-4, 120, 200)">
+    <rect x="60" y="80" width="320" height="430" rx="4" fill="#f0ede6" opacity="0.04"/>
+    <rect x="60" y="80" width="320" height="430" rx="4" fill="none" stroke="#c9a85c" stroke-width="0.8" opacity="0.25"/>
+    <!-- Document header line -->
+    <rect x="80" y="100" width="280" height="2" fill="#c9a85c" opacity="0.2"/>
+    <!-- Document text lines -->
+    <rect x="80" y="118" width="180" height="6" rx="2" fill="#c9a85c" opacity="0.12"/>
+    <rect x="80" y="132" width="240" height="4" rx="2" fill="#e0ddd6" opacity="0.06"/>
+    <rect x="80" y="144" width="200" height="4" rx="2" fill="#e0ddd6" opacity="0.06"/>
+    <rect x="80" y="156" width="260" height="4" rx="2" fill="#e0ddd6" opacity="0.06"/>
+    <rect x="80" y="180" width="280" height="1" fill="#c9a85c" opacity="0.1"/>
+    <!-- JWLA-033 key text -->
+    <text x="80" y="210" font-family="Georgia, serif" font-size="22" fill="#c9a85c" opacity="0.55" letter-spacing="2">JWLA-033</text>
+    <rect x="80" y="220" width="200" height="4" rx="2" fill="#e0ddd6" opacity="0.06"/>
+    <rect x="80" y="232" width="240" height="4" rx="2" fill="#e0ddd6" opacity="0.06"/>
+    <rect x="80" y="244" width="160" height="4" rx="2" fill="#e0ddd6" opacity="0.06"/>
+    <!-- Rate highlight -->
+    <rect x="80" y="268" width="200" height="28" rx="2" fill="#c9a85c" opacity="0.07"/>
+    <text x="88" y="287" font-family="'Courier New', monospace" font-size="14" fill="#c9a85c" opacity="0.6">2.5% of insured value</text>
+    <rect x="80" y="308" width="240" height="4" rx="2" fill="#e0ddd6" opacity="0.06"/>
+    <rect x="80" y="320" width="200" height="4" rx="2" fill="#e0ddd6" opacity="0.06"/>
+    <rect x="80" y="332" width="260" height="4" rx="2" fill="#e0ddd6" opacity="0.06"/>
+    <text x="80" y="370" font-family="Georgia, serif" font-size="11" fill="#c9a85c" opacity="0.35" letter-spacing="1">Lloyd's Joint War Committee</text>
+    <text x="80" y="388" font-family="Georgia, serif" font-size="11" fill="#c9a85c" opacity="0.35" letter-spacing="1">3 March 2026</text>
+  </g>
+
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="4" height="600" fill="#c9a85c" opacity="0.7"/>
+
+  <!-- Main title block -->
+  <g>
+    <!-- Site label -->
+    <text x="480" y="155" font-family="'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif"
+          font-size="13" fill="#c9a85c" opacity="0.7" letter-spacing="4">内側からの保守論</text>
+
+    <!-- Main headline -->
+    <text x="480" y="240" font-family="'Noto Serif JP', 'Hiragino Mincho ProN', serif"
+          font-size="68" font-weight="700" fill="#e8e2d8" opacity="0.95" letter-spacing="-1">見ていない、という罪</text>
+
+    <!-- Subtitle -->
+    <text x="482" y="290" font-family="'Noto Serif JP', 'Hiragino Mincho ProN', serif"
+          font-size="22" fill="#c9a85c" opacity="0.75" font-style="italic">北京の握手と日本保守論の盲点</text>
+
+    <!-- Divider -->
+    <line x1="480" y1="315" x2="1100" y2="315" stroke="#c9a85c" stroke-width="0.8" opacity="0.25"/>
+  </g>
+
+  <!-- Data badges -->
+  <!-- Badge 1: 保険料 -->
+  <g>
+    <rect x="480" y="335" width="170" height="52" rx="3" fill="#c9a85c" opacity="0.07" stroke="#c9a85c" stroke-width="0.6" stroke-opacity="0.3"/>
+    <text x="493" y="354" font-family="'Courier New', monospace" font-size="10" fill="#c9a85c" opacity="0.5" letter-spacing="1">WAR-RISK PREMIUM</text>
+    <text x="493" y="376" font-family="'Courier New', monospace" font-size="18" fill="#c9a85c" opacity="0.9" font-weight="bold">0.25% → 2.5%</text>
+  </g>
+
+  <!-- Badge 2: 通過量 -->
+  <g>
+    <rect x="668" y="335" width="190" height="52" rx="3" fill="#e3611a" opacity="0.07" stroke="#e3611a" stroke-width="0.6" stroke-opacity="0.3"/>
+    <text x="681" y="354" font-family="'Courier New', monospace" font-size="10" fill="#e3611a" opacity="0.5" letter-spacing="1">HORMUZ FLOW</text>
+    <text x="681" y="376" font-family="'Courier New', monospace" font-size="18" fill="#e3611a" opacity="0.9" font-weight="bold">20M → 2M bpd</text>
+  </g>
+
+  <!-- Badge 3: 追加コスト -->
+  <g>
+    <rect x="876" y="335" width="190" height="52" rx="3" fill="#5b9bd5" opacity="0.07" stroke="#5b9bd5" stroke-width="0.6" stroke-opacity="0.3"/>
+    <text x="889" y="354" font-family="'Courier New', monospace" font-size="10" fill="#5b9bd5" opacity="0.5" letter-spacing="1">MAERSK MONTHLY +COST</text>
+    <text x="889" y="376" font-family="'Courier New', monospace" font-size="18" fill="#5b9bd5" opacity="0.9" font-weight="bold">$500M / mo</text>
+  </g>
+
+  <!-- Date -->
+  <text x="480" y="420" font-family="'Courier New', monospace" font-size="11" fill="#c9a85c" opacity="0.35" letter-spacing="2">2026.05.10 — 石井 聡</text>
+
+  <!-- Decorative corner element -->
+  <g opacity="0.15" stroke="#c9a85c" stroke-width="1" fill="none">
+    <line x1="1520" y1="20" x2="1580" y2="20"/>
+    <line x1="1580" y1="20" x2="1580" y2="80"/>
+  </g>
+  <g opacity="0.15" stroke="#c9a85c" stroke-width="1" fill="none">
+    <line x1="20" y1="560" x2="80" y2="560"/>
+    <line x1="20" y1="560" x2="20" y2="520"/>
+  </g>
+</svg>
