@@ -11,7 +11,7 @@
     <copyright>Copyright 2026 石井聡</copyright>
     <managingEditor>sois2004@gmail.com (石井聡)</managingEditor>
     <webMaster>sois2004@gmail.com (石井聡)</webMaster>
-    <lastBuildDate>Sun, 04 May 2026 20:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 10 May 2026 09:00:00 +0900</lastBuildDate>
     <ttl>1440</ttl>
     <atom:link href="https://soishii2026.github.io/satoshi-naimen-hoshuron/rss.xml" rel="self" type="application/rss+xml"/>
 
@@ -20,6 +20,17 @@
       <title>内側からの保守論</title>
       <link>https://soishii2026.github.io/satoshi-naimen-hoshuron/</link>
     </image>
+
+    <item>
+    <title>宣言は既に死んでいる——台湾「言語戦」と、親米保守が直視を避けている問い</title>
+    <link>https://soishii2026.github.io/satoshi-naimen-hoshuron/lang-war.html</link>
+    <description>「Do not support」から「Oppose」へ——一語の置換が47年間の米台宣言を解体する。トランプ訪中（5月14〜15日）を前に、宣言の死と抑止の空白、高市政権が晒される孤立の構造を論じる。外交文書の一語は、ときに一個艦隊より静かに、しかし深く戦略環境を変える。</description>
+    <pubDate>Sat, 10 May 2026 09:00:00 +0900</pubDate>
+    <guid>https://soishii2026.github.io/satoshi-naimen-hoshuron/lang-war.html</guid>
+    <dc:creator>石井聡</dc:creator>
+    <category>台湾海峡</category>
+    <category>日米同盟</category>
+    </item>
 
     <item>
     <title>憲法を「アップデート」と呼んだ瞬間——「国のかたち」を語らぬ改憲論への違和感</title>
