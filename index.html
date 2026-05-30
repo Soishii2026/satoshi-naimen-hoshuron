@@ -33,166 +33,212 @@
       <p class="masthead-tagline">保守の内側から、統治の節度を問う</p>
     </div>
     <nav class="masthead-nav" aria-label="メインナビゲーション">
-      <a href="index.html">記事一覧</a>
-      <a href="#categories">カテゴリ</a>
-      <a href="#about">筆者について</a>
-      <a href="rss.xml">RSS</a>
-      <a href="https://note.com/s_ishii" target="_blank" rel="noopener" style="color:var(--gold)">note →</a>
+      <a href="#articles">記事一覧</a>
+      <a href="https://note.com/s_ishii" target="_blank" rel="noopener" style="color:var(--gold)">note</a>
+      <a href="./ai-tools/" style="color:var(--gold);border:1px solid var(--gold);padding:2px 9px;border-radius:3px;font-size:0.85em;">AI西郷</a>
+      <a href="./burke.html" style="color:var(--gold);border:1px solid var(--gold);padding:2px 9px;border-radius:3px;font-size:0.85em;">バーク20選</a>
+      <a href="./genshi-shiroku.html" style="color:var(--gold);border:1px solid var(--gold);padding:2px 9px;border-radius:3px;font-size:0.85em;">言志四録</a>
+      <a href="./ai-tools/iroha.html" style="color:var(--gold);border:1px solid var(--gold);padding:2px 9px;border-radius:3px;font-size:0.85em;">薩摩いろは歌</a>
     </nav>
     <button class="hamburger" aria-label="メニュー" onclick="toggleMobileNav()">
       <span></span><span></span><span></span>
     </button>
   </div>
   <nav class="mobile-nav" id="mobile-nav" aria-label="モバイルナビゲーション">
-    <a href="index.html">記事一覧</a>
-    <a href="#categories">カテゴリ</a>
-    <a href="#about">筆者について</a>
-    <a href="rss.xml">RSS</a>
+    <a href="#articles">記事一覧</a>
     <a href="https://note.com/s_ishii" target="_blank" rel="noopener" style="color:var(--gold)">note でフォロー →</a>
+    <a href="./ai-tools/" style="color:var(--gold);">AI西郷 ～南洲の精神で志を問う～</a>
+    <a href="./burke.html" style="color:var(--gold);">バーク20選 ～令和保守の基礎語録～</a>
+    <a href="./genshi-shiroku.html" style="color:var(--gold);">言志四録 ～古香評つき三十六條～</a>
+    <a href="./ai-tools/iroha.html" style="color:var(--gold);">薩摩いろは歌 ～日新公47首～</a>
   </nav>
 </header>
 
-<!-- ─── Hero ─── -->
-<section class="hero" aria-label="サイト紹介">
-  <div class="hero-content fade-in">
-    <p class="hero-eyebrow">Column / 政治コラム</p>
-    <h1 class="hero-title">保守の内側から、<br>統治の節度を問う</h1>
+<!-- ─── Site Intro ─── -->
+<section class="hero-section">
+<div class="hero">
+  <div>
+    <p class="hero-eyebrow">Editorial Column — Satoshi Ishii</p>
+    <h1 class="hero-title">保守を称えない。<br>保守の内側から問う。</h1>
     <div class="hero-divider"></div>
     <p class="hero-desc">
-      「一発も撃たれずに負ける」状況を最も警戒する。<br>
-      自民党や保守陣営を内側から問うコラムニスト、石井聡が書く。
+      自民党の「保守」を外から批判することは容易い。だがそれは届かない。本サイトは、保守を支持しながらも、その失速・逸脱・節度の喪失を内側から問う立場に立つ。日本政治・安全保障・国家象徴の扱いについて、数字と論理で論じる。
     </p>
   </div>
-  <div class="hero-deco fade-in" style="animation-delay:0.15s">
-    <div style="background:var(--bg-2);border:1px solid var(--border-gold);padding:28px 24px;position:relative;overflow:hidden;">
-      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent)"></div>
-      <p style="font-family:var(--font-sans);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">最新コラム</p>
-      <p style="font-family:var(--font-serif);font-size:1.1rem;font-weight:700;color:var(--text-0);line-height:1.5;margin-bottom:12px;">兵器庫ではなく、政治の中でしか行えないこと</p>
-      <p style="font-family:var(--font-serif);font-size:0.85rem;color:var(--text-1);line-height:1.8;margin-bottom:20px;">「守られる国家」から「自ら守る国家」へ。専守防衛の再定義とは軍事ドクトリンの修正ではなく、日本が安全保障の最終責任を政治として所有し直す作業である。</p>
-      <a href="buki.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--gold);display:flex;align-items:center;gap:6px;">全文を読む →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ─── Search ─── -->
-<div class="search-wrapper" role="search">
-  <div class="search-inner">
-    <input
-      type="search"
-      class="search-input"
-      id="search-input"
-      placeholder="記事を検索（タイトル・タグ）"
-      aria-label="記事を検索"
-      oninput="filterArticles(this.value)"
-    >
-    <span class="search-icon" aria-hidden="true">🔍</span>
-    <p class="search-results-count" id="search-count" aria-live="polite"></p>
+  <div class="hero-map" aria-hidden="true">
+    <img src="images/hero-japan-map.png" alt="" class="hero-map-img">
   </div>
 </div>
+</section>
 
 <!-- ─── Main Content ─── -->
 <main id="main" class="page-content">
 
   <!-- ─── Articles ─── -->
-  <section aria-label="記事一覧">
+  <section id="articles" aria-label="最新記事">
     <div class="section-header">
-      <h2 class="section-title">Articles</h2>
-      <span class="section-count" id="article-count">3 本</span>
+      <h2 class="section-title">最新記事</h2>
     </div>
 
     <div class="articles-list" id="articles-list">
 
-      <!-- Featured -->
+      <!-- Featured: 最新記事 -->
       <article class="article-card featured fade-in"
-               data-title="兵器庫ではなく、政治の中でしか行えないこと"
-               data-tags="安全保障 専守防衛 日米同盟 抑止 自衛隊"
-               onclick="location.href='buki.html'">
-        <div class="card-thumb" id="thumb-buki">
-          <img src="images/buki-hero.jpg" alt="専守防衛と政治の所有権" loading="lazy"
-               onerror="document.getElementById('thumb-buki').style.display='none'">
+               onclick="location.href='kojinjoho.html'">
+        <div class="card-thumb" id="thumb-kojinjoho">
+          <img src="images/kojinjoho-hero.jpg" alt="PPCはなぜ自分の独立性を投げ捨てたのか のアイキャッチ" loading="eager"
+               onerror="document.getElementById('thumb-kojinjoho').style.display='none'">
         </div>
         <div class="card-meta">
-          <time class="card-date" datetime="2026-04-19">2026.04.19</time>
+          <time class="card-date" datetime="2026-05-27">2026.05.27</time>
           <div class="card-tags">
             <span class="tag featured-tag">最新</span>
-            <span class="tag">安全保障</span>
-            <span class="tag">専守防衛</span>
-            <span class="tag">日米同盟</span>
+            <span class="tag">個人情報・AI規制</span>
           </div>
         </div>
-        <h3 class="card-title">兵器庫ではなく、政治の中でしか行えないこと</h3>
-        <p class="card-excerpt">「守られる国家」から「自ら守る国家」へ。専守防衛の再定義とは軍事ドクトリンの修正ではなく、日本が安全保障の最終責任を政治として所有し直す作業である。弾道ミサイルの着弾まで4〜6分、意思決定に許される時間はさらにその内側にある。問われているのは兵器の性能ではなく、決断の所在だ。</p>
+        <h3 class="card-title">PPCはなぜ自分の独立性を投げ捨てたのか</h3>
+        <p class="card-excerpt">個人情報保護委員会が今年1月、本文わずか4頁の制度改正方針に書いた一行——「整合したものとなるよう、調整することとする」。独立規制機関が産業政策側への従属を自認した瞬間、3年ごと見直しの本質が露わになる。同日成立の国家情報会議設置法と並走する統治構造の自殺を、保守の本籍から問う。</p>
         <div class="card-footer">
-          <span class="read-time">約6分</span>
+          <span class="read-time">約9分</span>
           <span class="read-more">全文を読む <span aria-hidden="true">→</span></span>
         </div>
       </article>
 
-      <!-- Article 2 -->
+      <!-- 2本目: 核を叫ぶ前に、順序がある -->
       <article class="article-card fade-in"
-               data-title="南鳥島に、何を積み上げるのか"
-               data-tags="国土安保 安全保障 エネルギー 核廃棄物"
-               style="animation-delay:0.1s"
-               onclick="location.href='article.html'">
-        <div class="card-thumb" id="thumb-minami">
-          <img src="images/minami-torishima-hero.jpg" alt="南鳥島" loading="lazy"
-               onerror="document.getElementById('thumb-minami').style.display='none'">
+               onclick="location.href='kaku-junjo.html'">
+        <div class="card-thumb" id="thumb-kaku-junjo">
+          <img src="images/kaku-junjo-hero.png" alt="核を叫ぶ前に、順序がある のアイキャッチ" loading="lazy"
+               onerror="document.getElementById('thumb-kaku-junjo').style.display='none'">
         </div>
         <div class="card-meta">
-          <time class="card-date" datetime="2026-04-18">2026.04.18</time>
+          <time class="card-date" datetime="2026-05-20">2026.05.20</time>
           <div class="card-tags">
-            <span class="tag">国土安保</span>
-            <span class="tag">安全保障</span>
-            <span class="tag">エネルギー</span>
+            <span class="tag">安保・核政策</span>
           </div>
         </div>
-        <h3 class="card-title">南鳥島に、何を積み上げるのか</h3>
-        <p class="card-excerpt">東京から約1,900km。太平洋の最果ての孤島・南鳥島に、今、計算された「積み上げ」が静かに進んでいる。レアアース開発、自衛隊拠点化、そして核廃棄物処分場選定——3つの国家意思が、同じ小さな島に重なりつつある。「住民がいないから反対が出にくい」という論理は、民主的な合意形成の基礎を意図的に迂回しているに過ぎない。</p>
+        <h3 class="card-title">核を叫ぶ前に、順序がある</h3>
+        <p class="card-excerpt">維新の核共有提言は間違っているのではなく、順序が逆だ。７回の協議、５本の条約、３つの信頼醸成——その蓄積なしに核の傘は機能しない。与党安保提言の分裂が示す抑止力の自壊を問う。</p>
         <div class="card-footer">
-          <span class="read-time">約5分</span>
+          <span class="read-time">約9分</span>
           <span class="read-more">全文を読む <span aria-hidden="true">→</span></span>
         </div>
       </article>
 
-      <!-- Article 3 -->
+      <!-- 3本目: 測れないものを、消してよいのか -->
       <article class="article-card fade-in"
-               data-title="量はある、だが届かない ホルムズ危機で露呈した可用性の崩壊"
-               data-tags="ホルムズ危機 エネルギー安保 経済安保 物流 可用性"
-               style="animation-delay:0.2s"
-               onclick="location.href='hormuz.html'">
-        <div class="card-thumb" id="thumb-hormuz">
-          <img src="images/hormuz-hero.jpg" alt="ホルムズ危機" loading="lazy"
-               onerror="document.getElementById('thumb-hormuz').style.display='none'">
+               onclick="location.href='noritake.html'">
+        <div class="card-thumb" id="thumb-noritake">
+          <img src="images/noritake-hero.png" alt="ノリタケの白磁器と東証の株価ボード——百年の連続性と資本効率の文法の衝突" loading="lazy"
+               onerror="document.getElementById('thumb-noritake').style.display='none'">
         </div>
         <div class="card-meta">
-          <time class="card-date" datetime="2026-04-18">2026.04.18</time>
+          <time class="card-date" datetime="2026-05-14">2026.05.14</time>
           <div class="card-tags">
-            <span class="tag">ホルムズ危機</span>
-            <span class="tag">エネルギー安保</span>
-            <span class="tag">経済安保</span>
+            <span class="tag">コーポレートガバナンス</span>
+            <span class="tag">文化資本</span>
           </div>
         </div>
-        <h3 class="card-title">「量はある、だが届かない」——ホルムズ危機で露呈した可用性の崩壊</h3>
-        <p class="card-excerpt">「日本全体として必要となる量は確保できている」——政府はそう説明する。だがホルムズ危機が暴いたのは、総量の不足よりも深い機能不全だった。ガソリン店頭価格は3月2日の158円から16日には190円超へ、わずか2週間で32円の上昇。「倉庫にあるか」ではなく「誰に、何を、どの順番で、どう届けるか」——危機の本質はそこにある。</p>
+        <h3 class="card-title">測れないものを、消してよいのか</h3>
+        <p class="card-excerpt">丸木強は正しい。ノリタケの資本効率批判は正確だ。だがその「正しさ」は測れないものを「ない」と見なす装置でもある。DIC川村記念美術館が示した「会社が勝訴し、文化資本が失われた」という先例が、六月の株主総会を前に問いを突きつける。</p>
         <div class="card-footer">
-          <span class="read-time">約6分</span>
+          <span class="read-time">約7分</span>
           <span class="read-more">全文を読む <span aria-hidden="true">→</span></span>
         </div>
       </article>
+
+      <!-- 3本目: 「量はある」と、政府は言う。 -->
+      <article class="article-card fade-in"
+               onclick="location.href='nafusa.html'">
+        <div class="card-thumb" id="thumb-nafusa">
+          <img src="images/nafusa-hero.png" alt="白黒になったカルビーのポテトチップスとぎょうざの満洲の販売休止" loading="lazy"
+               onerror="document.getElementById('thumb-nafusa').style.display='none'">
+        </div>
+        <div class="card-meta">
+          <time class="card-date" datetime="2026-05-11">2026.05.11</time>
+          <div class="card-tags">
+            <span class="tag">食料安全保障</span>
+            <span class="tag">ホルムズ</span>
+          </div>
+        </div>
+        <h3 class="card-title">「量はある」と、政府は言う。</h3>
+        <p class="card-excerpt">国産100%の餃子が「トレー不足」で棚から消え、カルビーのパッケージが白黒になった。問題は量ではない——届ける経路が詰まっている。食料安全保障の射程が問われる。</p>
+        <div class="card-footer">
+          <span class="read-time">約8分</span>
+          <span class="read-more">全文を読む <span aria-hidden="true">→</span></span>
+        </div>
+      </article>
+
+      <!-- 4本目: 見ていない、という罪 -->
+      <article class="article-card fade-in"
+               onclick="location.href='mienai-tsumi.html'">
+        <div class="card-thumb" id="thumb-mienai-tsumi">
+          <img src="images/mienai-tsumi-hero.svg" alt="ロンドンの保険市場アイキャッチ" loading="lazy"
+               onerror="document.getElementById('thumb-mienai-tsumi').style.display='none'">
+        </div>
+        <div class="card-meta">
+          <time class="card-date" datetime="2026-05-10">2026.05.10</time>
+          <div class="card-tags">
+            <span class="tag">ホルムズ</span>
+            <span class="tag">保守論</span>
+          </div>
+        </div>
+        <h3 class="card-title">見ていない、という罪</h3>
+        <p class="card-excerpt">ミサイルが海峡を封鎖したのではない。保険数理士がホルムズを閉めた。4つのシステムが1つの外交の窓に押し込まれている今、日本保守論が見ていないものを問う。</p>
+        <div class="card-footer">
+          <span class="read-time">約8分</span>
+          <span class="read-more">全文を読む <span aria-hidden="true">→</span></span>
+        </div>
+      </article>
+
 
     </div><!-- /articles-list -->
-
-    <div class="no-results hidden" id="no-results">
-      <p>「<span id="no-results-query"></span>」に一致する記事が見つかりませんでした。</p>
-    </div>
-
-
   </section>
 
   <!-- ─── Sidebar ─── -->
   <aside class="sidebar" id="about" aria-label="サイドバー">
 
-    <!-- Author -->
+    <!-- Article Index (全記事一覧) -->
+    <div class="sidebar-block">
+      <p class="sidebar-block-title">記事インデックス（全29本）</p>
+      <nav aria-label="記事インデックス">
+        <ol class="article-toc-list">
+        <li class="article-toc-item"><a href="kojinjoho.html"><span class="toc-num">01</span><span class="toc-date">2026.05.27</span><span class="toc-title">PPCはなぜ自分の独立性を投げ捨てたのか——個人情報保護法改正案、誰も読まない4頁の重み</span><span class="toc-tag">個人情報・AI規制</span></a></li>
+        <li class="article-toc-item"><a href="kaku-junjo.html"><span class="toc-num">02</span><span class="toc-date">2026.05.20</span><span class="toc-title">核を叫ぶ前に、順序がある——与党安保提言の分裂が示す、抑止力の自壊</span><span class="toc-tag">安保・核政策</span></a></li>
+        <li class="article-toc-item"><a href="noritake.html"><span class="toc-num">03</span><span class="toc-date">2026.05.14</span><span class="toc-title">測れないものを、消してよいのか——ノリタケ食器事業が問う、会計言語の構造的限界</span><span class="toc-tag">文化資本</span></a></li>
+        <li class="article-toc-item"><a href="nafusa.html"><span class="toc-num">04</span><span class="toc-date">2026.05.11</span><span class="toc-title">「量はある」と、政府は言う。——ナフサが食卓を侵食するまで</span><span class="toc-tag">食料安全保障</span></a></li>
+        <li class="article-toc-item"><a href="bichiku-wana.html"><span class="toc-num">05</span><span class="toc-date">2026.05.10</span><span class="toc-title">備蓄が稼いだ時間に、日本は何をするのか——脱石油の先に待つ「第二の罠」</span><span class="toc-tag">エネルギー安保</span></a></li>
+        <li class="article-toc-item"><a href="mienai-tsumi.html"><span class="toc-num">06</span><span class="toc-date">2026.05.10</span><span class="toc-title">見ていない、という罪——北京の握手と日本保守論の盲点</span><span class="toc-tag">外交安保</span></a></li>
+        <li class="article-toc-item"><a href="lang-war.html"><span class="toc-num">07</span><span class="toc-date">2026.05.10</span><span class="toc-title">宣言は既に死んでいる——台湾「言語戦」と、親米保守が直視を避けている問い</span><span class="toc-tag">台湾海峡</span></a></li>
+        <li class="article-toc-item"><a href="kenpo-update.html"><span class="toc-num">08</span><span class="toc-date">2026.05.04</span><span class="toc-title">憲法を「アップデート」と呼んだ瞬間——「国のかたち」を語らぬ改憲論への違和感</span><span class="toc-tag">改憲論</span></a></li>
+        <li class="article-toc-item"><a href="ai-aijo.html"><span class="toc-num">09</span><span class="toc-date">2026.05.03</span><span class="toc-title">ＡＩは「愛情」で同調する——熟議民主主義の静かな解体</span><span class="toc-tag">AI・文明論</span></a></li>
+        <li class="article-toc-item"><a href="silence.html"><span class="toc-num">10</span><span class="toc-date">2026.05.02</span><span class="toc-title">科学を黙らせた国の代償——物理学会六千四百三十二人と、対話なき政策の限界</span><span class="toc-tag">学術安保</span></a></li>
+        <li class="article-toc-item"><a href="mutual-hostage.html"><span class="toc-num">11</span><span class="toc-date">2026.05.01</span><span class="toc-title">米中首脳会談は「交渉」ではない——相互人質の時代、日本の選択</span><span class="toc-tag">経済安保</span></a></li>
+        <li class="article-toc-item"><a href="burke.html"><span class="toc-num">12</span><span class="toc-date">2026.05.01</span><span class="toc-title">エドマンド・バーク 名言二十選——令和保守の基礎語録</span><span class="toc-tag">古典</span></a></li>
+        <li class="article-toc-item"><a href="void.html"><span class="toc-num">13</span><span class="toc-date">2026.04.30</span><span class="toc-title">特別罪のない空白——国家は自らの中枢を守れるか</span><span class="toc-tag">法制度</span></a></li>
+        <li class="article-toc-item"><a href="sanbunsho.html"><span class="toc-num">14</span><span class="toc-date">2026.04.29</span><span class="toc-title">三文書が書かなかったこと——政治への試験問題が始まった</span><span class="toc-tag">安全保障</span></a></li>
+        <li class="article-toc-item"><a href="josei-tenno.html"><span class="toc-num">15</span><span class="toc-date">2026.04.28</span><span class="toc-title">「女性天皇」と「女系天皇」は違う——八割の数字が隠す、問いの罠</span><span class="toc-tag">皇位継承</span></a></li>
+        <li class="article-toc-item"><a href="tsuka.html"><span class="toc-num">16</span><span class="toc-date">2026.04.28</span><span class="toc-title">安全保障は語られる、通貨は語られない——保守言論の空白とホルムズ危機</span><span class="toc-tag">通貨安保</span></a></li>
+        <li class="article-toc-item"><a href="hoshu-seitousei.html"><span class="toc-num">17</span><span class="toc-date">2026.04.27</span><span class="toc-title">勝ちすぎた政権の罠——保守的正統性の三層同時剥離</span><span class="toc-tag">保守政治</span></a></li>
+        <li class="article-toc-item"><a href="anpo3.html"><span class="toc-num">18</span><span class="toc-date">2026.04.27</span><span class="toc-title">守護者から創造者へ——安保3文書改訂が問う保守の本質</span><span class="toc-tag">安全保障</span></a></li>
+        <li class="article-toc-item"><a href="iran-kakuka.html"><span class="toc-num">19</span><span class="toc-date">2026.04.26</span><span class="toc-title">強制外交という保守の誤謬——核武装を引き寄せる自己矛盾</span><span class="toc-tag">外交安保</span></a></li>
+        <li class="article-toc-item"><a href="genshi-shiroku.html"><span class="toc-num">20</span><span class="toc-date">2026.04.26</span><span class="toc-title">西郷南洲が愛した言志四録——古香評つき三十六條</span><span class="toc-tag">古典</span></a></li>
+        <li class="article-toc-item"><a href="mienai-gengo.html"><span class="toc-num">21</span><span class="toc-date">2026.04.25</span><span class="toc-title">見えない言語が同盟を変える——日本が持たなければならない言葉</span><span class="toc-tag">日米同盟</span></a></li>
+        <li class="article-toc-item"><a href="yasukuni.html"><span class="toc-num">22</span><span class="toc-date">2026.04.24</span><span class="toc-title">靖国を"私事"にした日——国家は何を手放したか</span><span class="toc-tag">保守政治</span></a></li>
+        <li class="article-toc-item"><a href="triage.html"><span class="toc-num">23</span><span class="toc-date">2026.04.23</span><span class="toc-title">国家はトリアージを語れるか——飽和攻撃が突きつける政治の空白</span><span class="toc-tag">安全保障</span></a></li>
+        <li class="article-toc-item"><a href="anpo-ronso.html"><span class="toc-num">24</span><span class="toc-date">2026.04.21</span><span class="toc-title">安全保障論争という名の信仰告白——なぜ議論は噛み合わないのか</span><span class="toc-tag">安全保障</span></a></li>
+        <li class="article-toc-item"><a href="hikigane.html"><span class="toc-num">25</span><span class="toc-date">2026.04.21</span><span class="toc-title">引き金を引くのは誰か——ＡＩと戦争、そして責任を失う文明</span><span class="toc-tag">AI・技術</span></a></li>
+        <li class="article-toc-item"><a href="hormuz50.html"><span class="toc-num">26</span><span class="toc-date">2026.04.19</span><span class="toc-title">「ホルムズ危機50日」——戦争はもう「撃たない」、それでも国家は壊れる</span><span class="toc-tag">経済安保</span></a></li>
+        <li class="article-toc-item"><a href="buki.html"><span class="toc-num">27</span><span class="toc-date">2026.04.19</span><span class="toc-title">兵器庫ではなく、政治の中でしか行えないこと</span><span class="toc-tag">安全保障</span></a></li>
+        <li class="article-toc-item"><a href="article.html"><span class="toc-num">28</span><span class="toc-date">2026.04.18</span><span class="toc-title">南鳥島に、何を積み上げるのか</span><span class="toc-tag">国土安保</span></a></li>
+        <li class="article-toc-item"><a href="hormuz.html"><span class="toc-num">29</span><span class="toc-date">2026.04.18</span><span class="toc-title">「量はある、だが届かない」——ホルムズ危機で露呈した可用性の崩壊</span><span class="toc-tag">エネルギー安保</span></a></li>
+      </ol>
+    </nav>
+
+
+    </div><!-- /sidebar-block: article index -->
+
+    <!-- 著者について -->
     <div class="sidebar-block">
       <p class="sidebar-block-title">筆者について</p>
       <p class="author-name">石井　聡</p>
@@ -205,39 +251,6 @@
       <a href="https://note.com/s_ishii" target="_blank" rel="noopener" class="note-cta">
         note でフォローする →
       </a>
-    </div>
-
-    <!-- Categories -->
-    <div class="sidebar-block" id="categories">
-      <p class="sidebar-block-title">カテゴリ</p>
-      <ul class="cat-list" role="list">
-        <li class="cat-item" onclick="filterArticles('専守防衛')">
-          <span>専守防衛・抑止論</span>
-          <span class="cat-count">1</span>
-        </li>
-        <li class="cat-item" onclick="filterArticles('安全保障')">
-          <span>国土・安全保障</span>
-          <span class="cat-count">2</span>
-        </li>
-        <li class="cat-item" onclick="filterArticles('エネルギー')">
-          <span>エネルギー安保</span>
-          <span class="cat-count">2</span>
-        </li>
-        <li class="cat-item" onclick="filterArticles('ホルムズ')">
-          <span>ホルムズ危機</span>
-          <span class="cat-count">1</span>
-        </li>
-        <li class="cat-item" onclick="filterArticles('経済安保')">
-          <span>経済安全保障</span>
-          <span class="cat-count">1</span>
-        </li>
-      </ul>
-      <button onclick="filterArticles('')"
-              style="margin-top:12px;font-family:var(--font-sans);font-size:0.72rem;color:var(--text-2);background:none;border:none;cursor:pointer;padding:0;transition:color 0.2s"
-              onmouseover="this.style.color='var(--gold)'"
-              onmouseout="this.style.color='var(--text-2)'">
-        すべて表示
-      </button>
     </div>
 
     <!-- RSS -->
@@ -268,6 +281,8 @@
 
 </main>
 
+
+
 <!-- ─── Footer ─── -->
 <footer class="site-footer" role="contentinfo">
   <div class="footer-inner">
@@ -276,7 +291,7 @@
         <p class="footer-brand-name">内側からの保守論</p>
         <p class="footer-brand-tagline">保守の内側から、統治の節度を問う</p>
         <div class="footer-links">
-          <a href="index.html">記事一覧</a>
+          <a href="#articles">記事一覧</a>
           <a href="rss.xml">RSS</a>
           <a href="https://note.com/s_ishii" target="_blank" rel="noopener">note</a>
         </div>
@@ -284,9 +299,19 @@
       <div>
         <p style="font-family:var(--font-sans);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">最近の記事</p>
         <ul style="display:flex;flex-direction:column;gap:8px;">
-          <li><a href="buki.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">兵器庫ではなく、政治の中でしか行えないこと</a></li>
-          <li><a href="article.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">南鳥島に、何を積み上げるのか</a></li>
-          <li><a href="hormuz.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'"">「量はある、だが届かない」</a></li>
+          <li><a href="kojinjoho.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--gold)">PPCはなぜ自分の独立性を投げ捨てたのか</a></li>
+          <li><a href="kaku-junjo.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">核を叫ぶ前に、順序がある</a></li>
+          <li><a href="noritake.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">測れないものを、消してよいのか</a></li>
+          <li><a href="nafusa.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">「量はある」と、政府は言う。</a></li>
+          <li><a href="bichiku-wana.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">備蓄が稼いだ時間に、日本は何をするのか</a></li>
+          <li><a href="mienai-tsumi.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">見ていない、という罪</a></li>
+          <li><a href="lang-war.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">宣言は既に死んでいる</a></li>
+          <li><a href="kenpo-update.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">憲法を「アップデート」と呼んだ瞬間</a></li>
+          <li><a href="ai-aijo.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">ＡＩは「愛情」で同調する</a></li>
+          <li><a href="silence.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">科学を黙らせた国の代償</a></li>
+          <li><a href="mutual-hostage.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">米中首脳会談は「交渉」ではない</a></li>
+          <li><a href="burke.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">エドマンド・バーク 名言二十選</a></li>
+          <li><a href="void.html" style="font-family:var(--font-sans);font-size:0.78rem;color:var(--text-2);transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-2)'">特別罪のない空白</a></li>
         </ul>
       </div>
     </div>
@@ -303,41 +328,6 @@
 /* ─── Mobile nav ─── */
 function toggleMobileNav() {
   document.getElementById('mobile-nav').classList.toggle('open');
-}
-
-/* ─── Search / Filter ─── */
-function filterArticles(query) {
-  const q = query.trim().toLowerCase();
-  const cards = document.querySelectorAll('#articles-list .article-card');
-  const noResults = document.getElementById('no-results');
-  const countEl = document.getElementById('article-count');
-  const searchInput = document.getElementById('search-input');
-
-  if (query !== searchInput.value) searchInput.value = query;
-
-  let visible = 0;
-  cards.forEach(card => {
-    const title = (card.dataset.title || '').toLowerCase();
-    const tags  = (card.dataset.tags  || '').toLowerCase();
-    const match = !q || title.includes(q) || tags.includes(q);
-    card.classList.toggle('hidden', !match);
-    if (match) visible++;
-  });
-
-  const countSpan = document.getElementById('search-count');
-  if (q) {
-    countSpan.textContent = `「${query}」— ${visible} 件`;
-  } else {
-    countSpan.textContent = '';
-  }
-  countEl.textContent = `${visible} 本`;
-
-  if (visible === 0 && q) {
-    document.getElementById('no-results-query').textContent = query;
-    noResults.classList.remove('hidden');
-  } else {
-    noResults.classList.add('hidden');
-  }
 }
 
 /* ─── Scroll to top ─── */
@@ -358,5 +348,6 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 fadeEls.forEach(el => observer.observe(el));
 </script>
+
 </body>
 </html>
