@@ -11,7 +11,7 @@
     <copyright>Copyright 2026 石井聡</copyright>
     <managingEditor>sois2004@gmail.com (石井聡)</managingEditor>
     <webMaster>sois2004@gmail.com (石井聡)</webMaster>
-    <lastBuildDate>Thu, 11 Jun 2026 12:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jul 2026 12:00:00 +0900</lastBuildDate>
     <ttl>1440</ttl>
     <atom:link href="https://soishii2026.github.io/satoshi-naimen-hoshuron/rss.xml" rel="self" type="application/rss+xml"/>
 
@@ -20,6 +20,18 @@
       <title>内側からの保守論</title>
       <link>https://soishii2026.github.io/satoshi-naimen-hoshuron/</link>
     </image>
+
+    <item>
+    <title>目的を取り違えた外交——ＮＡＴＯ欠席で問われる判断資質</title>
+    <link>https://soishii2026.github.io/satoshi-naimen-hoshuron/nato.html</link>
+    <description>ＮＡＴＯ首脳会議を高市首相が2年連続で欠席。最も高くついたのは空席ではなく、「トランプ米大統領と会えるか」で出席を値踏みした判断軸が世界に公開されたことだ。目的関数を入口で取り違えた外交を、保守の本籍から問う。</description>
+    <pubDate>Tue, 07 Jul 2026 12:00:00 +0900</pubDate>
+    <guid>https://soishii2026.github.io/satoshi-naimen-hoshuron/nato.html</guid>
+    <dc:creator>石井聡</dc:creator>
+    <category>安全保障・外交</category>
+    <category>ＮＡＴＯ</category>
+    <category>高市政権</category>
+    </item>
 
     <item>
     <title>保守の沈黙は忠誠ではない——中傷動画疑惑、読売と産経が書かない1カ月</title>
