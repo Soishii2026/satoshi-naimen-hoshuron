@@ -901,6 +901,94 @@ ul { list-style: none; }
   margin-bottom: 0;
 }
 
+/* ─── Brief callout box ─── */
+.article-body .callout-box {
+  max-width: 720px;
+  margin: 32px 0;
+  padding: 22px 26px;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+}
+.article-body .callout-box.callout-alert {
+  border-left-color: #c0563f;
+  background: rgba(192,86,63,0.05);
+}
+.article-body .callout-label {
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.article-body .callout-box.callout-alert .callout-label { color: #d0735c; }
+.article-body .callout-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.article-body .callout-list li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 1.02rem;
+  line-height: 1.9;
+  color: var(--text-1);
+}
+.article-body .callout-list li::before {
+  content: '▪';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--gold-dim);
+  font-size: 0.85em;
+}
+
+/* ─── Sources box ─── */
+.article-body .sources-box {
+  max-width: 720px;
+  margin: 44px 0 8px;
+  padding: 22px 24px;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+}
+.article-body .sources-label {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.article-body .sources-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.article-body .sources-list li {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+.article-body .sources-list a {
+  color: var(--text-2);
+  transition: color 0.2s;
+  word-break: break-word;
+}
+.article-body .sources-list a:hover { color: var(--gold); }
+.article-body .sources-note {
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  line-height: 1.7;
+  color: var(--text-2);
+  margin-bottom: 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
 .article-footer-cta {
   max-width: 720px;
   margin-top: 48px;

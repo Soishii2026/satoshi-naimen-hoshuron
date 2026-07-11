@@ -82,17 +82,38 @@
 
     <div class="articles-list" id="articles-list">
 
-      <!-- Featured: 最新記事 目的を取り違えた外交 -->
+      <!-- Featured: 最新記事 ホルムズ危機ブリーフ -->
       <article class="article-card featured fade-in"
+               onclick="location.href='hormuz-brief.html'">
+        <div class="card-thumb" id="thumb-hormuz-brief">
+          <img src="images/hormuz-brief-hero.jpg" alt="ホルムズ危機ブリーフ のアイキャッチ" loading="eager"
+               onerror="document.getElementById('thumb-hormuz-brief').style.display='none'">
+        </div>
+        <div class="card-meta">
+          <time class="card-date" datetime="2026-07-11">2026.07.11</time>
+          <div class="card-tags">
+            <span class="tag featured-tag">最新</span>
+            <span class="tag">安全保障・外交</span>
+          </div>
+        </div>
+        <h3 class="card-title">「ホルムズ危機ブリーフ」——撃たれる海峡、狙われる元首</h3>
+        <p class="card-excerpt">7月7日、ホルムズ海峡で単日として最多の攻撃。60日停戦は瓦解し、その週、イランによるトランプ大統領暗殺計画の情報まで浮上した。海峡の物理的封鎖と元首暗殺の報道を結ぶのは、「撃たずに相手の判断を動かす」情報という武器である。事実と解釈を分けて記す、保守のブリーフ。</p>
+        <div class="card-footer">
+          <span class="read-time">約8分</span>
+          <span class="read-more">全文を読む <span aria-hidden="true">→</span></span>
+        </div>
+      </article>
+
+      <!-- 目的を取り違えた外交（前回の最新） -->
+      <article class="article-card fade-in"
                onclick="location.href='nato.html'">
         <div class="card-thumb" id="thumb-nato">
-          <img src="images/nato-hero.png" alt="目的を取り違えた外交 のアイキャッチ" loading="eager"
+          <img src="images/nato-hero.png" alt="目的を取り違えた外交 のアイキャッチ" loading="lazy"
                onerror="document.getElementById('thumb-nato').style.display='none'">
         </div>
         <div class="card-meta">
           <time class="card-date" datetime="2026-07-07">2026.07.07</time>
           <div class="card-tags">
-            <span class="tag featured-tag">最新</span>
             <span class="tag">安全保障・外交</span>
           </div>
         </div>
