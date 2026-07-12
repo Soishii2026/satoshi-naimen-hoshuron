@@ -19,6 +19,8 @@ drafts/      draft_v1.md, draft_v2.md, final.md
 checks/      fact_check.md, citation_check.md, style_check.md, diff_report.md
 audits/      audit_request_*.md, audit_reply_*.md, audit_log.md,
              evidence_packet_*.md
+wiki/        知識層（案件横断の蓄積。詳細は wiki_schema.md）
+  index.md, log.md, pages/
 ```
 
 ## 作業原則
@@ -80,6 +82,23 @@ GATE STATUS 形式の判定を行い、サトシさんの承認を得てから�
   因果の断定）が含まれる場合は、該当命題限定のミニC監査を実施する。中心命題を
   左右する場合または3件以上ある場合はフル版へ昇格する。
 - Grok 由来の新事実は、そのまま採用せず必ず出典確認に戻す。
+
+## 知識層（wiki）
+
+案件をまたぐ蓄積層。運用の詳細は wiki_schema.md に従う。ここでは崩しては
+ならない原則のみ再掲する:
+
+1. **wiki は証拠ではない。** ゲート判定・監査・台帳の出典は常に sources/ の
+   原資料。W-ID を evidence_ledger の出典にしない。wiki の記述を原稿に使う
+   場合は source_id をたどり原資料で再確認する。
+2. **区分は伝播する。** ページは依拠資料の最も厳しい区分を継承する。
+   RESTRICTED の内容は wiki に書かない。CONFIDENTIAL は内容を転記せず
+   ポインタのみ。外部AIへ渡せるのは PUBLIC 由来のページに限る。
+3. **未確認を確定に昇格させない。** 全ページに7分類を必須とする。
+4. **ingest / lint は指示があったときのみ実行する。** 無人・定期の自動実行は
+   しない。lint で公開済み記事との矛盾を検出した場合は HUMAN_DECISION として
+   サトシさんに上げる。
+5. 新案件の収集（工程2）の冒頭で wiki を検索し、差分調査から始める。
 
 ## 「公開可」の成立条件
 

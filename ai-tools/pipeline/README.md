@@ -4,6 +4,8 @@ Claude Code を主工程、GPT-5.6 Sol を外部監査役、Grok を公開反応
 とする三層構造の制作パイプライン。GPT-5.6 Sol 側との協議で基本合意した最終版。
 
 - 制定日: 2026-07-12
+- 追補: 2026-07-12 v2.2（案）— 知識層（wiki）を追加（§9）。制作層（§1〜8）は
+  無変更。追補の採否はサトシさんの承認による。
 - 本ディレクトリはテンプレート置き場である。**実際の調査データ（sources/ research/
   drafts/ checks/ audits/）は必ず非公開ワークスペースに置き、この公開リポジトリには
   完成した公開用HTMLのみを置く。**
@@ -137,13 +139,41 @@ Grok から新しい事実が提示された場合は、そのまま採用せず
   main への直接 push が拒否されるか／`sources/` への書き込みが拒否されるか／
   RESTRICTED ファイルの外部送信が止まるか／Hook 無効時に警告が出るか。
 
-## 9. 運用開始前チェックリスト
+## 9. 知識層（wiki）— v2.2 追補（案）
+
+案件別サブフォルダに閉じる調査資産（台帳・監査裁定・確定事実）を、案件を
+またいで蓄積する層。非公開ワークスペースに `wiki/`（index.md・log.md・pages/）
+を置き、3操作で回す。スキーマ全文は `workspace/wiki_schema.md`。
+
+| 操作 | 起動 | 内容 |
+|---|---|---|
+| INGEST | サトシさんの指示のみ（無人・定期実行なし） | 公開済み記事・完了案件の台帳（確認済み事実）・audit_log 裁定を原子的ページに分解し、既存ページ全体と照合してリンク。矛盾は両論併記＋矛盾フラグ |
+| QUERY | 新案件の工程2冒頭で必須 | wiki を検索して既知／未知を仕分け、未知だけを調査する（差分調査）。原稿に使う際は source_id をたどり原資料で再確認 |
+| LINT | 週1回、指示により | ページ間矛盾・陳腐化（現職者・日付・数値）・**公開済み記事との矛盾**・孤立ページ・未展開トピックを報告。削除しない。公開済み記事との矛盾は HUMAN_DECISION |
+
+制作層との境界（崩さない原則）:
+
+- **wiki は証拠ではない。** ゲート・監査・台帳の出典は常に原資料。W-ID は
+  evidence_ledger の出典にならない。
+- **区分は伝播する。** RESTRICTED は wiki に書かない。CONFIDENTIAL は
+  ポインタのみ。外部AIへ渡せるのは PUBLIC 由来ページに限る。
+- **未確認を確定に昇格させない。** 全ページに7分類必須。
+- 公開後に記事と audit_log を ingest する（実質の工程11）。lint の
+  未展開トピックは次案件の 00_brief 候補になる。
+
+## 10. 運用開始前チェックリスト
 
 - [ ] 非公開ワークスペースを作成し、`workspace/` 一式（CLAUDE.md・.claude/）をコピーした
 - [ ] ChatGPT の「Improve the model for everyone」をオフにした
 - [ ] 公開リポジトリの main に branch protection を設定した
 - [ ] 拒否テスト4項目を実施した
 - [ ] まずコラム1本を軽量版で通し、摩擦点を洗い出す
+
+（wiki 追補を採用する場合）
+
+- [ ] `wiki_schema.md` を非公開ワークスペースへコピーし、`wiki/` を作成した
+- [ ] 既刊記事の bootstrap ingest を数本で試し、ページの粒度・分類を検分した
+- [ ] 検分結果を踏まえてスキーマを修正してから残りを段階的に ingest する
 
 ## ファイル構成
 
@@ -153,6 +183,7 @@ pipeline/
 ├─ publish_checklist.md            ← 公開リポジトリ用チェックリスト
 ├─ workspace/                      ← 非公開ワークスペースへコピーする一式
 │  ├─ CLAUDE.md
+│  ├─ wiki_schema.md               ← 知識層スキーマ（v2.2 追補・案）
 │  └─ .claude/
 │     ├─ settings.json             ← permissions.deny ＋ Hook 登録
 │     └─ hooks/guard.sh            ← PreToolUse ガードスクリプト
@@ -163,5 +194,6 @@ pipeline/
    ├─ audit_B_ledger_consistency.md
    ├─ audit_C_external_crosscheck.md
    ├─ evidence_packet_template.md
-   └─ audit_log_template.md
+   ├─ audit_log_template.md
+   └─ wiki_page_template.md        ← 知識層ページ雛形（v2.2 追補・案）
 ```
