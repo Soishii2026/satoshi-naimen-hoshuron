@@ -1,8 +1,8 @@
 {
   "permissions": {
     "deny": [
-      "Write(./sources/**)",
-      "Edit(./sources/**)",
+      "Write(**/sources/**)",
+      "Edit(**/sources/**)",
       "Bash(rm -rf:*)",
       "Bash(git push:*)",
       "Bash(curl:*)",
